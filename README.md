@@ -1,2 +1,2 @@
 # Master_thesis
-Analyzes for master's thesis
+Analysis for master's thesis
