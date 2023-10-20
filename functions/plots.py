@@ -5,11 +5,31 @@ import seaborn as sns
 import numpy as np
 
 
-def create_categorical_time_plot(df, categorical_column_name, name):
+def create_histogram_for_many(dfs, names, col, col_label):
+    for i, df in enumerate(dfs):
+        create_histogram(df, names[i+1], col, col_label)
+
+
+def create_histogram(df, name, col, col_label):
+    mu, sigma = df[col].mean(), df[col].std()
+    x = np.linspace(0, max(df[col]), 100)
+    y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    plt.xlim([0, max(df[col])])
+    plt.xlabel(col_label)
+
+    plt.hist(df[col], 20, density=True, alpha=0.7)
+    plt.plot(x, y, '--r',
+             label='przybliżona krzywa empirycznego\nrozkładu normalnego z próby')
+    plt.title(f"{name} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
+    plt.legend()
+    plt.show()
+
+
+def create_categorical_time_plot(df, col, col_label, categorical_column_name, name):
     """
     Create categorical time plot.
     """
-    time_column_name = 'czas'
+    time_column_name = col
     categories = df[categorical_column_name].unique()
 
     plt.figure(figsize=(10, 6))
@@ -19,7 +39,7 @@ def create_categorical_time_plot(df, categorical_column_name, name):
 
     plt.xlim([0, df[time_column_name].max()+10000])
     plt.yticks(range(1, len(categories) + 1), categories)
-    plt.xlabel('czas [ms]')
+    plt.xlabel(col_label)
     plt.ylabel(categorical_column_name)
     plt.title(f'{name} Rozkład czasu vs. {categorical_column_name}')
     plt.legend()

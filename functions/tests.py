@@ -74,7 +74,7 @@ def conduct_normality_test_for_many(dfs, names, continue_param, alpha):
         conduct_normality_test(df[continue_param], alpha)
 
 
-def conduct_test_for_gaussian_variables_for_many(dfs, dependent_var, independent_var, names_gauss, alpha):
+def conduct_test_for_gaussian_variables_for_many(dfs, names_gauss, dependent_var, independent_var, alpha):
     """
     For variables with Gaussian distribution.
     Check the homogeneity of variance and conduct right test: ANOVA or Kruskal-Wallis.
@@ -115,13 +115,18 @@ def conduct_normality_test(col, alpha):
         print('Rozkład jest różny od normalnego.')
 
 
-def conduct_homogeneity_var_test(df, alpha, continue_param, category_param):
+def conduct_homogeneity_var_test(df, alpha, continue_param, category_param, is_single=False):
     """
     Conduct homogeneity variance test.
     """
     groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
     w, p_value = levene(*groups)
     print('W:', w)
+    if is_single:
+        print('p-value:', p_value)
+        make_decision(p_value, alpha)
+        return
+
     return p_value
 
 
@@ -132,6 +137,7 @@ def conduct_anova_test(df, alpha, continue_param, category_param):
     groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
     f_value, p_value = f_oneway(*groups)
     print('F-value:', f_value)
+    print('p-value:', p_value)
     make_decision(p_value, alpha)
 
 
@@ -142,6 +148,7 @@ def conduct_kruskal_wallis_test(df, alpha, continue_param, category_param):
     groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
     h, p_value = kruskal(*groups)
     print('H:', h)
+    print('p-value:', p_value)
     make_decision(p_value, alpha)
 
 
