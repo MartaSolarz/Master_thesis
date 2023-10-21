@@ -17,15 +17,15 @@ def create_histogram(df, name, col, col_label):
     plt.xlim([0, max(df[col])])
     plt.xlabel(col_label)
 
-    plt.hist(df[col], 20, density=True, alpha=0.7)
+    plt.hist(df[col], 20, density=True, alpha=0.7, rwidth=0.95)
     plt.plot(x, y, '--r',
              label='przybliżona krzywa empirycznego\nrozkładu normalnego z próby')
     plt.title(f"{name} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
     plt.legend()
+    plt.grid(True, axis='y')
     plt.show()
 
-
-def create_categorical_time_plot(df, col, col_label, categorical_column_name, name):
+def create_categorical_time_plot(df, col, col_label, categorical_column_name, categorical_column_label,  name):
     """
     Create categorical time plot.
     """
@@ -40,8 +40,8 @@ def create_categorical_time_plot(df, col, col_label, categorical_column_name, na
     plt.xlim([0, df[time_column_name].max()+10000])
     plt.yticks(range(1, len(categories) + 1), categories)
     plt.xlabel(col_label)
-    plt.ylabel(categorical_column_name)
-    plt.title(f'{name} Rozkład czasu vs. {categorical_column_name}')
+    plt.ylabel(categorical_column_label)
+    plt.title(f'{name} Rozkład czasu vs. {categorical_column_label}')
     plt.legend()
     plt.grid(True)
     plt.show()
