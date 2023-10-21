@@ -72,6 +72,13 @@ def create_scatterWithregression_and_residuals_plots(df, continue_param, categor
     plt.show()
 
 
+def create_scatter_logit_plot_for_many(dfs, names, col1, col2, label1, label2):
+    for i, df in enumerate(dfs):
+        print('-------------------------------')
+        print(names[i+1])
+        create_scatter_logit_plot(df, col1, col2, label1, label2)
+
+
 def create_scatter_logit_plot(df, col1, col2, label1, label2):
     """
     Create scatter plot.
