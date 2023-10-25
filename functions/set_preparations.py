@@ -11,6 +11,15 @@ def prepare_row(list_of_cols):
 
     return new_row
 
+def prepare_row_df(df):
+    """
+    Prepare single row for data set.
+    """
+    new_row = df[df.columns[0]]
+    for i in range(1, len(df.columns)):
+        new_row = pd.concat([new_row, df[df.columns[i]]], ignore_index=True)
+
+    return new_row
 
 def prepare_set_changes_questions(list_of_cols, quest1, quest2, name_list_of_cols):
     new_row = list_of_cols[0]
