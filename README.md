@@ -22,26 +22,25 @@
 
 1. A = poprawność odpowiedzi; B = pewność/trudność --> kategoryczna binarna / kategoryczna vs kategoryczna --> test chi2 / dokładny test Fishera
 2. A = poprawność odpowiedzi; B = czas odpowiedzi --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
-3. A = poprawność odpowiedzi; B = pewność/trudność, czas odpowiedzi --> kategoryczna binarna / kategoryczna vs (kategoryczna && ilościowa ciągła) --> ANOVA/Kruskala-Wallisa
-4. A = czas odpowiedzi; B = pewność/trudność --> ilościowa ciągła vs kategoryczna --> ANOVA/Kruskala-Wallisa
-5. A = poprawność odpowiedzi; B = quest1/2 --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
-6. A = poprawność odpowiedzi; B = cechy osobowe --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
-7. A = pewność/trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
-8. A = czas odpowiedzi; B = cechy osobowe --> ilościowa ciągła vs kategoryczne --> ANOVA/Kruskala-Wallisa
-9. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa
-10. A = poprawność odpowiedzi; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
-11. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (liczba fiksacji/wizyt) --> kategoryczna binarna / kategoryczna vs ilościowa dyskretna --> gdy binarna (t-Student/Manna-Whitney'a); gdy nie jest binarna (ANOVA/Kruskala-Wallisa)
-12. A = poprawność odpowiedzi; B = ostatnie odwiedzone AOI --> kategoryczna binarna vs kategoryczna --> test chi2 / dokładny test Fishera
+3. A = czas odpowiedzi; B = pewność/trudność --> ilościowa ciągła vs kategoryczna --> ANOVA/Kruskala-Wallisa
+4. A = poprawność odpowiedzi; B = quest1/2 --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+5. A = poprawność odpowiedzi; B = cechy osobowe --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+6. A = pewność/trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+7. A = czas odpowiedzi; B = cechy osobowe --> ilościowa ciągła vs kategoryczne --> ANOVA/Kruskala-Wallisa
+8. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa 
+9. A = poprawność odpowiedzi; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
+10. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (liczba fiksacji/wizyt) --> kategoryczna binarna / kategoryczna vs ilościowa dyskretna --> gdy binarna (t-Student/Manna-Whitney'a); gdy nie jest binarna (ANOVA/Kruskala-Wallisa)
+11. A = poprawność odpowiedzi; B = ostatnie odwiedzone AOI --> kategoryczna binarna vs kategoryczna --> test chi2 / dokładny test Fishera
 
 ### Flow wyboru testu:
 
-**Mamy dwie zmienne kategoryczne: [1,5,6,7,12]**
+**Mamy dwie zmienne kategoryczne:**
 1. Założenie: niezależność prób --> spełnione, bo każda osoba odpowiadała na pytania niezależnie od pozostałych
 2. Wielkość próbki dla każdej z grup: 
    - jeśli $> 5$ --> test niezależności chi2-Pearsona; 
-   - wpp --> dokładny test Fishera;
+   - wpp --> dokładny test Fishera; ??? musi być tabela kontyngencji 2x2, więc też nie można... może korelacja rang Spearmana?
 
-**Mamy zmienną kategoryczną i zmienną ilościową dyskretną: [11]**
+**Mamy zmienną kategoryczną i zmienną ilościową dyskretną:**
 1. Jeśli zmienna kategoryczna jest binarna (mamy tylko dwie grupy):
    - test t-Studenta 
    - test Manna-Whitney'a
@@ -49,7 +48,7 @@
    - test ANOVA
    - test Kruskala-Wallisa
 
-**Mamy zmienną kategoryczną i zmienną ilościową ciągłą: [2,4,8,9,10]**
+**Mamy zmienną kategoryczną i zmienną ilościową ciągłą:**
 - test ANOVA
 - test Kruskala-Wallisa
 
