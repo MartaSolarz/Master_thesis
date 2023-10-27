@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def prepare_row(list_of_cols):
+def prepare_row_from_cols(list_of_cols):
     """
     Prepare single row for data set.
     """
@@ -11,7 +11,7 @@ def prepare_row(list_of_cols):
 
     return new_row
 
-def prepare_row_df(df):
+def prepare_row(df):
     """
     Prepare single row for data set.
     """

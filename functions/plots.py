@@ -1,29 +1,157 @@
+import pandas as pd
 import statsmodels.api as sm
 from sklearn.metrics import roc_curve
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+from functions.tests.categorical_only import create_contingency_table
 
+
+def plot_heatmap(df, column1, column2, label1, label2, title="", cmap="YlGnBu"):
+    """
+    Generates a heatmap based on a contingency table.
+
+    Args:
+    df (DataFrame): Data in the form of a DataFrame.
+    column1 (str): Name of first categorical variable.
+    column2 (str): Name of second categorical variable.
+    label1 (str): Label for column1.
+    label2 (str): Label for column2.
+    title (str): Title of the plot (optional).
+    cmap (str): Color palette (optional).
+
+    Returns:
+    None
+    """
+    table = create_contingency_table(df, column1, column2)
+    sns.heatmap(table, annot=True, fmt="d", cmap=cmap)
+    plt.xlabel(label2)
+    plt.ylabel(label1)
+    plt.title(title)
+    plt.show()
+
+
+def plot_scatter_with_regression(df: pd.DataFrame, columnX: str, columnY: str, title="Scatter Plot with Regression"):
+    """
+    Generates a scatter plot with a linear regression line.
+
+    Args:
+    df (DataFrame): Data in the form of a DataFrame.
+    columnX (str): Name of first categorical variable.
+    columnY (str): Name of second categorical variable.
+    title (str): Title of the plot (optional).
+
+    Returns:
+    None
+    """
+    x = df[columnX]
+    y = df[columnY]
+    sns.set(style="whitegrid")
+    sns.regplot(x=x, y=y, color='b', marker='+', scatter_kws={'s': 100})
+    plt.title(title)
+    plt.show()
+
+
+def plot_multi_boxplot(df: pd.DataFrame, category_param: str, continue_param: str, label_category: str, label_continue: str, title: str = "Boxplot dla grup"):
+    """
+    Generates a boxplot for multiple series of data based on a categorical parameter.
+
+    Args:
+    df (pd.DataFrame): The DataFrame containing the data.
+    category_param (str): The name of the column with categorical data.
+    continue_param (str): The name of the column with continuous data.
+    label_category (str): Label for categorical data.
+    label_continue (str): Label for continuous data.
+    title (str, optional): Title of the plot. Default is "Boxplot dla grup".
+
+    Returns:
+    None
+    """
+    sns.set(style="whitegrid")
+    sns.boxplot(data=df, x=category_param, y=continue_param, orient="v")
+    plt.title(title)
+    plt.grid(True, axis='y')
+    plt.xlabel(label_category)
+    plt.ylabel(label_continue)
+    plt.show()
+
+
+def plot_multi_density(df: pd.DataFrame, continue_param: str, category_param: str, label: str, label_legend: str, title="Wykres gęstości dla grup"):
+    """
+    Generates a density plot for multiple series of data based on a categorical parameter.
+
+    Args:
+    df (pd.DataFrame): The DataFrame containing the data.
+    continue_param (str): The name of the column with continuous data.
+    category_param (str): The name of the column with categorical data.
+    label (str): Label for the x-axis of the plot.
+    label_legend (str): Label for the legend of the plot.
+    title (str, optional): Title of the plot. Default is "Wykres gęstości dla grup".
+
+    Returns:
+    None
+    """
+    groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
+    sns.set(style="whitegrid")
+    for i, group in enumerate(groups):
+        sns.kdeplot(group, label=df[category_param].unique()[i], warn_singular=False)
+
+    plt.xlabel(label)
+    plt.title(title, size=12)
+    plt.legend(title=label_legend)
+    plt.grid(True)
+    plt.show()
+
+
+def create_histogram(df, title, column, column_label):
+    """
+    Generates a histogram for a specific column in the DataFrame, along with an estimated empirical normal distribution curve.
+
+    Args:
+    df (DataFrame): The DataFrame containing the data.
+    title (str): Title of the histogram.
+    column (str): Name of the column to create a histogram for.
+    column_label (str): Label for the column on the x-axis.
+
+    Returns:
+    None
+    """
+
+    mu, sigma = df[column].mean(), df[column].std()
+    x = np.linspace(0, max(df[column]), 100)
+    y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    plt.xlim([0, max(df[column])])
+    plt.xlabel(column_label)
+
+    plt.hist(df[column], 20, density=True, alpha=0.7, rwidth=0.95)
+    plt.plot(x, y, '--r', label='Approximated empirical normal distribution curve from the sample')
+    plt.title(f"{title} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
+    plt.legend()
+    plt.grid(True, axis='y')
+    plt.show()
+
+
+###################################
 def create_histogram_for_many(dfs, names, col, col_label):
     for i, df in enumerate(dfs):
         create_histogram(df, names[i+1], col, col_label)
 
 
-def create_histogram(df, name, col, col_label):
-    mu, sigma = df[col].mean(), df[col].std()
-    x = np.linspace(0, max(df[col]), 100)
-    y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
-    plt.xlim([0, max(df[col])])
-    plt.xlabel(col_label)
-
-    plt.hist(df[col], 20, density=True, alpha=0.7, rwidth=0.95)
-    plt.plot(x, y, '--r',
-             label='przybliżona krzywa empirycznego\nrozkładu normalnego z próby')
-    plt.title(f"{name} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
-    plt.legend()
-    plt.grid(True, axis='y')
-    plt.show()
+# def create_histogram(df, name, col, col_label):
+#     mu, sigma = df[col].mean(), df[col].std()
+#     x = np.linspace(0, max(df[col]), 100)
+#     y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+#     plt.xlim([0, max(df[col])])
+#     plt.xlabel(col_label)
+#
+#     plt.hist(df[col], 20, density=True, alpha=0.7, rwidth=0.95)
+#     plt.plot(x, y, '--r',
+#              label='przybliżona krzywa empirycznego\nrozkładu normalnego z próby')
+#     plt.title(f"{name} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
+#     plt.legend()
+#     plt.grid(True, axis='y')
+#     plt.show()
 
 def create_categorical_time_plot(df, col, col_label, categorical_column_name, categorical_column_label,  name):
     """

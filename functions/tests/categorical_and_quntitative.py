@@ -18,7 +18,10 @@ def conduct_categorical_vs_quantitative_continue_test(df: pd.DataFrame, continue
     None
     """
     groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
-    if normality_test(groups, alpha) and homogeneity_var_test(groups, alpha) and is_sample_size_enough(groups):
+    if any(len(group) < 3 for group in groups):
+        print('Kruskal-Wallis test conducted...')
+        p_value = kruskal_wallis_test(groups)
+    elif normality_test(groups, alpha) and homogeneity_var_test(groups, alpha) and is_sample_size_enough(groups):
         print('ANOVA test conducted...')
         p_value = anova_test(groups)
     else:
