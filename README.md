@@ -1,17 +1,120 @@
-# Master thesis
-Analysis for master's thesis.
+# Metodyka testów
 
-## I. General tests:
+### Nasze zmienne:
+- poprawność odpowiedzi: kategoryczna binarna (w przypadku analizowania każdej grafiki osobno lub kolekcji); kategoryczna (w przypadku analizowania sumy grafik);
+- pewność/trudność odpowiedzi: kategoryczna;
+- czas odpowiedzi: ilościowa ciągła;
+- questions 1,2: kategoryczne;
+- cechy osobowe (płeć, rok urodzenia, kierunek studiów, rok studiów, specjalność, wady wzroku, ilość snu, wyniki matur, umiejętności, typ uczenia poznawczego): kategoryczne;
+- całkowita długość fiksacji/wizyty, średnia długość fiksacji/wizyty, średnia wielkość źrenicy: ilościowe ciągłe;
+- liczba fiksacji/wizyty: ilościowa dyskretna;
+- ostatnie odwiedzone AOI: kategoryczna;
 
-| Zmienna zależna    | Zmienna/e niezależna/e              | H0, H1                                                                                                                                                                                                                                                                                                                                                            | Analizowane serie grafik                                                                                                                                                                                                                                                         | Metodyka                                                                                                                                                 | Wykresy                                                                        |
-|--------------------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| poprawność         | pewność / trudność                  | **H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a poziomem trudności. <br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a poziomem trudności.                                                                                                                                                                    | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>każda osobno;<br/>+ trudność dla trzech grup 1,2,3;                                                                                                | test chi2 - dwie zmienne dyskretne                                                                                                                       | index poprawne/niepoprawne odpowiedzi                                          |
-| poprawność         | czas                                | **H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a czasem odpowiedzi.<br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a czasem odpowiedzi.                                                                                                                                                     | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>każda osobno;                                                                                                                                      | test - regresja logistyczna (zmienna zależna - dyskretna, zmienna niezależna - ciągła)                                                                   | scatter plot + logit regression, roc, residuals, efekty warunkowe              |
-| poprawność         | pewność / trudność i czas           | **H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a czasem odpowiedzi i trudnością zadania.<br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a czasem odpowiedzi i trudnością zadania.                                                                                                           | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>każda osobno;                                                                                                                                      | test - regresja logistyczna (zmienna zależna - dyskretna, zmienne niezależne - ciągła i dyskretna)                                                       | scatter plot + logit regression, roc, residuals, efekty warunkowe              |
-| czas               | pewność / trudność                  | **H0:** Nie ma istotnej statystycznie zależności między czasem odpowiedzi a trudnością zadania.<br/>**H1:** Istnieje istotna statystycznie zależność między czasem odpowiedzi a trudnością zadania.                                                                                                                                                               | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>każda osobno;                                                                                                                                      | test - normalności (Shapiro-Wilka), jeśli rozkład normalny -> homogeniczność wariancji Levene'a, jeśli spełniona --> test ANOVA; w.p.p. Kruskala-Wallisa | scatter plot + regresja liniowa, residuals, histogram rozkładu normalnego      |
-| poprawność         | Quest1, Quest2 - przed i po badaniu | **H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a wybraną preferowaną formą (mapa vs mapa + inne elementy; mapa vs tabela vs wykres vs tekst).<br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a wybraną preferowaną formą (mapa vs mapa + inne elementy; mapa vs tabela vs wykres vs tekst).<br/>**H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a zmianą zdania w pytaniu 1/2.<br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a zmianą zdania w pytaniu 1/2. | Dla 4 pytań: powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Zmiany: powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>osobno: 1a, 1b (wyszła istotnośc statystyczna dla 1); |      test chi2 - dwie zmienne dyskretne                                                                                                                                                | brak                                                                           |
-| poprawność         | cechy osobowe                       | **H0:** Nie ma istotnej statystycznie zależności między poprawnością odpowiedzi a wartością cechy X.<br/>**H1:** Istnieje istotna statystycznie zależność między poprawnością odpowiedzi a wartością cechy X.                                                                                                                                                     | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;                                                                                                                                                                                                                                                                                 |  test chi2 - dwie zmienne dyskretne                                                                                                                                                          | brak                                                                           |
-| pewność / trudność | cechy osobowe                       | **H0:** Nie ma istotnej statystycznie zależności między trudnością zadania a wartością cechy X.<br/>**H1:** Istnieje istotna statystycznie zależność między trudnością zadania a wartością cechy X.                                                                                                                                                               | Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;                                                                                                                                                                                                                                                                                 |   test chi2 - dwie zmienne dyskretne                                                                                                                                                         | brak                                                                           |
-| czas               | cechy osobowe                       | **H0:** Nie ma istotnej statystycznie zależności między czasem odpowiedzi a wartością cechy X.<br/>**H1:** Istnieje istotna statystycznie zależność między czasem odpowiedzi a wartością cechy X.                                                                                                                                                                 |                                               Zsumowany wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;<br/>Powielony wynik: wszystkie grafiki, grafiki A, B, 1, 2, 3;                                                                                                                                                                                                                                   |   test - normalności (Shapiro-Wilka), jeśli rozkład normalny -> homogeniczność wariancji Levene'a, jeśli spełniona --> test ANOVA; w.p.p. Kruskala-Wallisa                                                                                                                                                       | histogramy rozkładu normalnego, scatter ploty z rozkładem cechy względem czasu |
+*kategoryczna - zmienna o charakterze jakościowym, skończona liczba osiąganych wartości
 
-**Poziom istotności:** $\alpha=0.05$
+### Jakie testy chcemy przeprowadzić?
+
+**H0:** brak istotnej statystycznie zależności między A a B
+
+**H1:** istnieje istotna statystycznie zależność między A a B
+
+**Poziom istotności:** $\alpha = 0.05$
+
+1. A = poprawność odpowiedzi; B = pewność/trudność --> kategoryczna binarna / kategoryczna vs kategoryczna --> test chi2 / dokładny test Fishera
+2. A = poprawność odpowiedzi; B = czas odpowiedzi --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
+3. A = poprawność odpowiedzi; B = pewność/trudność, czas odpowiedzi --> kategoryczna binarna / kategoryczna vs (kategoryczna && ilościowa ciągła) --> ANOVA/Kruskala-Wallisa
+4. A = czas odpowiedzi; B = pewność/trudność --> ilościowa ciągła vs kategoryczna --> ANOVA/Kruskala-Wallisa
+5. A = poprawność odpowiedzi; B = quest1/2 --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+6. A = poprawność odpowiedzi; B = cechy osobowe --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+7. A = pewność/trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+8. A = czas odpowiedzi; B = cechy osobowe --> ilościowa ciągła vs kategoryczne --> ANOVA/Kruskala-Wallisa
+9. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa
+10. A = poprawność odpowiedzi; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
+11. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (liczba fiksacji/wizyt) --> kategoryczna binarna / kategoryczna vs ilościowa dyskretna --> gdy binarna (t-Student/Manna-Whitney'a); gdy nie jest binarna (ANOVA/Kruskala-Wallisa)
+12. A = poprawność odpowiedzi; B = ostatnie odwiedzone AOI --> kategoryczna binarna vs kategoryczna --> test chi2 / dokładny test Fishera
+
+### Flow wyboru testu:
+
+**Mamy dwie zmienne kategoryczne: [1,5,6,7,12]**
+1. Założenie: niezależność prób --> spełnione, bo każda osoba odpowiadała na pytania niezależnie od pozostałych
+2. Wielkość próbki dla każdej z grup: 
+   - jeśli $> 5$ --> test niezależności chi2-Pearsona; 
+   - wpp --> dokładny test Fishera;
+
+**Mamy zmienną kategoryczną i zmienną ilościową dyskretną: [11]**
+1. Jeśli zmienna kategoryczna jest binarna (mamy tylko dwie grupy):
+   - test t-Studenta 
+   - test Manna-Whitney'a
+2. Jeśli zmienna katogoryczna przyjmuje więcej niż dwie wartości (zmienna jakościowa dyskretna):
+   - test ANOVA
+   - test Kruskala-Wallisa
+
+**Mamy zmienną kategoryczną i zmienną ilościową ciągłą: [2,4,8,9,10]**
+- test ANOVA
+- test Kruskala-Wallisa
+
+### Założenia dotyczące testów:
+
+**H0:** brak istotnej statystycznie zależności między X a Y
+
+**H1:** istnieje istotna statystycznie zależnośc między X a Y
+
+1. Test niezależności chi2 Pearsona
+- niezależność prób
+- badamy zmienne kategoryczne
+- wielkość próby dla każdej z grup - conajmniej 5
+
+2. Dokładny test Fishera
+- niezależność prób
+- badamy zmienne kategoryczne
+- wielkość próby dla każdej z grup - może być mniejsza równa 5
+
+3. Test t-Studenta --> badanie równości średnich dla grup
+- niezależność prób
+- rozkład zmiennej zależnej w każdej z analizowanych grup pochodzi z rozkładu normalnego --> Test Shapiro-Wilka
+- porówynwane grupy mają zbliżoną liczebność
+- homogeniczność wariancji dla porównywanych grup --> Test Levene'a --> jeśli nie zachowana stosujemy poprawkę stopni swobody testu t-Studenta
+- zmienna zależna mierzona jest w skali ilościowej
+
+4. Test Manna-Whitney'a --> badanie median dla grup
+- niezależność prób
+- zmienna zależna mierzona jest w skali conajmniej porządkowej (porządkowa lub ilościowa), można też stosować dla skali dychotomicznej (0-1)
+- stosujemy jeśli nie są spełnione założenia testu t-Studenta, nie wymaga żadnego innego założenia
+
+5. Test ANOVA -> badanie równości wariancji między grupami
+- niezależność prób
+- liczebność dla każdej z grup conajmniej 20
+- rozkład zmiennej zależnej w każdej z analizowanych grup pochodzi z rozkładu normalnego
+- homogeniczność wariancji dla porównywanych grup 
+
+6. Test Kruskala-Wallisa 
+- niezależność prób
+- jeśli nie są spełnione założenia testu ANOVA
+
+Testy pomocnicze do implementacji:
+- Shapiro-Wilka
+- Levene'a
+- Test zgodności chi2
+
+
+### Wykresy:
+
+Dwie zmienne kategoryczne: heatmapa na tabeli kontyngencji
+
+Jedna kategoryczna druga ilościowa dyskretna: punktowy z regresją; wykres pudełkowy
+
+Jedna kategoryczna druga ilościowa ciągła: density plot; wykres pudełkowy
+
+References: 
+- Chi2/Fisher tests: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5426219/#:~:text=The%20chi%2Dsquared%20test%20applies,especially%20for%20small%2Dsized%20samples.
+- T-student test: https://www.jmp.com/en_ch/statistics-knowledge-portal/t-test.html
+- Manna-Whitney'a: https://www.researchgate.net/publication/5147446_Nonparametric_Tests_of_Differences_in_Medians_Comparison_of_the_Wilcoxon-Mann-Whitney_and_Robust_Rank-Order_Tests; https://statistics.laerd.com/spss-tutorials/mann-whitney-u-test-using-spss-statistics.php
+- ANOVA/ Kruskal-Wallis: https://www.researchgate.net/publication/361988408_Power_comparison_of_ANOVA_and_Kruskal-Wallis_tests_when_error_assumptions_are_violated
+- skrypt SAD, Stata MIMUW --> poszukać literatury z prezentacji
+
+### Czy próbki są niezależne?
+
+- Kolekcja (powielenie) --> TAK bo zrobiliśmy losową kolejność grafik dla każdego badanego
+- Suma wyników --> TAK bo każdy badany to osobny wiersz
+- Każda grafika --> TAK bo każdy badany to osobny wiersz
+
