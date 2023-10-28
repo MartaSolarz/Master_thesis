@@ -104,32 +104,32 @@ def plot_multi_density(df: pd.DataFrame, continue_param: str, category_param: st
     plt.show()
 
 
-def create_histogram(df, title, column, column_label):
-    """
-    Generates a histogram for a specific column in the DataFrame, along with an estimated empirical normal distribution curve.
-
-    Args:
-    df (DataFrame): The DataFrame containing the data.
-    title (str): Title of the histogram.
-    column (str): Name of the column to create a histogram for.
-    column_label (str): Label for the column on the x-axis.
-
-    Returns:
-    None
-    """
-
-    mu, sigma = df[column].mean(), df[column].std()
-    x = np.linspace(0, max(df[column]), 100)
-    y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
-    plt.xlim([0, max(df[column])])
-    plt.xlabel(column_label)
-
-    plt.hist(df[column], 20, density=True, alpha=0.7, rwidth=0.95)
-    plt.plot(x, y, '--r', label='Approximated empirical normal distribution curve from the sample')
-    plt.title(f"{title} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
-    plt.legend()
-    plt.grid(True, axis='y')
-    plt.show()
+# def create_histogram(df, title, column, column_label):
+#     """
+#     Generates a histogram for a specific column in the DataFrame, along with an estimated empirical normal distribution curve.
+#
+#     Args:
+#     df (DataFrame): The DataFrame containing the data.
+#     title (str): Title of the histogram.
+#     column (str): Name of the column to create a histogram for.
+#     column_label (str): Label for the column on the x-axis.
+#
+#     Returns:
+#     None
+#     """
+#
+#     mu, sigma = df[column].mean(), df[column].std()
+#     x = np.linspace(0, max(df[column]), 100)
+#     y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+#     plt.xlim([0, max(df[column])])
+#     plt.xlabel(column_label)
+#
+#     plt.hist(df[column], 20, density=True, alpha=0.7, rwidth=0.95)
+#     plt.plot(x, y, '--r', label='Approximated empirical normal distribution curve from the sample')
+#     plt.title(f"{title} Histogram\n($\mu$={mu:.2f}, $\sigma$={sigma:.2f})")
+#     plt.legend()
+#     plt.grid(True, axis='y')
+#     plt.show()
 
 
 ###################################

@@ -27,10 +27,10 @@
 5. A = poprawność odpowiedzi; B = cechy osobowe --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
 6. A = trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
 7. A = czas odpowiedzi; B = cechy osobowe --> ilościowa ciągła vs kategoryczne --> ANOVA/Kruskala-Wallisa
-8. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa 
-9. A = poprawność odpowiedzi; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
-10. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (liczba fiksacji/wizyt) --> kategoryczna binarna / kategoryczna vs ilościowa dyskretna --> gdy binarna (t-Student/Manna-Whitney'a); gdy nie jest binarna (ANOVA/Kruskala-Wallisa)
-11. A = poprawność odpowiedzi; B = ostatnie odwiedzone AOI --> kategoryczna binarna vs kategoryczna --> test chi2 / dokładny test Fishera
+8. A = poprawność odpowiedzi/trudność; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa 
+9. A = poprawność odpowiedzi/trudność; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
+10. A = poprawność odpowiedzi/trudność; B = metryki fiksacje/wizyty (liczba fiksacji/wizyt) --> kategoryczna binarna / kategoryczna vs ilościowa dyskretna --> gdy binarna (t-Student/Manna-Whitney'a); gdy nie jest binarna (ANOVA/Kruskala-Wallisa)
+11. A = poprawność odpowiedzi/trudność; B = ostatnie odwiedzone AOI --> kategoryczna binarna vs kategoryczna --> test chi2 / dokładny test Fishera
 
 ### Flow wyboru testu:
 
