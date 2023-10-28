@@ -20,12 +20,12 @@
 
 **Poziom istotności:** $\alpha = 0.05$
 
-1. A = poprawność odpowiedzi; B = pewność/trudność --> kategoryczna binarna / kategoryczna vs kategoryczna --> test chi2 / dokładny test Fishera
+1. A = poprawność odpowiedzi; B = trudność --> kategoryczna binarna / kategoryczna vs kategoryczna --> test chi2 / dokładny test Fishera
 2. A = poprawność odpowiedzi; B = czas odpowiedzi --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
 3. A = czas odpowiedzi; B = pewność/trudność --> ilościowa ciągła vs kategoryczna --> ANOVA/Kruskala-Wallisa
 4. A = poprawność odpowiedzi; B = quest1/2 --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
 5. A = poprawność odpowiedzi; B = cechy osobowe --> kategoryczna binarna / kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
-6. A = pewność/trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
+6. A = trudność; B = cechy osobowe --> kategoryczna vs kategoryczne --> test chi2 / dokładny test Fishera
 7. A = czas odpowiedzi; B = cechy osobowe --> ilościowa ciągła vs kategoryczne --> ANOVA/Kruskala-Wallisa
 8. A = poprawność odpowiedzi; B = metryki fiksacje/wizyty (całkowita, średnia długość fiksacji/wizyty) --> kategoryczna binarna / kategoryczna vs ilościowe ciągłe --> ANOVA/Kruskala-Wallisa 
 9. A = poprawność odpowiedzi; B = średnia wielkość źrenicy --> kategoryczna binarna / kategoryczna vs ilościowa ciągła --> ANOVA/Kruskala-Wallisa
