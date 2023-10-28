@@ -39,6 +39,7 @@
 2. Wielkość próbki dla każdej z grup: 
    - jeśli $> 5$ --> test niezależności chi2-Pearsona; 
    - wpp --> dokładny test Fishera; ??? musi być tabela kontyngencji 2x2, więc też nie można... może korelacja rang Spearmana?
+   - posthoc: Nemenyi bo nieparametryczna metoda
 
 **Mamy zmienną kategoryczną i zmienną ilościową dyskretną:**
 1. Jeśli zmienna kategoryczna jest binarna (mamy tylko dwie grupy):
@@ -47,6 +48,7 @@
 2. Jeśli zmienna katogoryczna przyjmuje więcej niż dwie wartości (zmienna jakościowa dyskretna):
    - test ANOVA
    - test Kruskala-Wallisa
+   - posthoc: Tukey/Nemenyi
 
 **Mamy zmienną kategoryczną i zmienną ilościową ciągłą:**
 - test ANOVA
