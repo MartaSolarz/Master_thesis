@@ -1,6 +1,5 @@
 import pandas as pd
 from scipy.stats import fisher_exact, chi2_contingency, spearmanr
-from itertools import combinations
 
 from functions.tests.helper import make_decision
 

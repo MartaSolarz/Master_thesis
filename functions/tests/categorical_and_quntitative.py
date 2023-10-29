@@ -4,7 +4,7 @@ from scipy.stats import shapiro, f_oneway, levene, kruskal, ttest_ind, mannwhitn
 from functions.tests.helper import make_decision
 
 
-def conduct_categorical_vs_quantitative_continue_test(df: pd.DataFrame, continue_param: str, category_param: str, alpha=0.05) -> None:
+def conduct_categorical_vs_quantitative_for_many_groups_test(df: pd.DataFrame, continue_param: str, category_param: str, alpha=0.05) -> None:
     """
     Conducts a test between a categorical variable and a quantitative variable.
 
@@ -19,6 +19,7 @@ def conduct_categorical_vs_quantitative_continue_test(df: pd.DataFrame, continue
     """
     groups = [df[df[category_param] == i][continue_param] for i in df[category_param].unique()]
     if any(len(group) < 3 for group in groups):
+        print('Data have not at least length 3...')
         print('Kruskal-Wallis test conducted...')
         p_value = kruskal_wallis_test(groups)
     elif normality_test(groups, alpha) and homogeneity_var_test(groups, alpha) and is_sample_size_enough(groups):
@@ -31,7 +32,7 @@ def conduct_categorical_vs_quantitative_continue_test(df: pd.DataFrame, continue
     make_decision(p_value, alpha)
 
 
-def conduct_categorical_vs_quantitative_descrite_test(df: pd.DataFrame, numerical_param: str, binary_param: str, alpha=0.05) -> None:
+def conduct_categorical_vs_quantitative_for_two_groups_test(df: pd.DataFrame, numerical_param: str, binary_param: str, alpha=0.05) -> None:
     """
     Conducts a test between a quantitative parameter and a binary parameter.
 
@@ -47,7 +48,11 @@ def conduct_categorical_vs_quantitative_descrite_test(df: pd.DataFrame, numerica
     data_group1 = df[df[binary_param] == 0][numerical_param]
     data_group2 = df[df[binary_param] == 1][numerical_param]
     groups = [data_group1, data_group2]
-    if normality_test(groups, alpha) and homogeneity_var_test(groups, alpha) and is_equivalence(groups):
+    if any(len(group) < 3 for group in groups):
+        print('Data have not at least length 3...')
+        print('Mann-Whitney test conducted...')
+        p_value = mann_whitney_test(groups)
+    elif normality_test(groups, alpha) and homogeneity_var_test(groups, alpha) and is_equivalence(groups):
         print('T-Student test conducted...')
         p_value = t_test(groups)
     else:
