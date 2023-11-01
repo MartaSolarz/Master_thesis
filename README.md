@@ -110,7 +110,7 @@ References:
 
 ### Czy próbki są niezależne?
 
-- Kolekcja (powielenie) --> TAK bo zrobiliśmy losową kolejność grafik dla każdego badanego
+- Kolekcja (powielenie) --> NIE
 - Suma wyników --> TAK bo każdy badany to osobny wiersz
 - Każda grafika --> TAK bo każdy badany to osobny wiersz
 

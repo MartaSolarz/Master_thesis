@@ -27,20 +27,21 @@ def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, alpha=0.05) -> No
     make_decision(p_val, alpha)
 
 
-def ttest_or_wilcoxon(df: pd.DataFrame, column1: str, column2: str, alpha=0.05) -> None:
+def ttest_or_wilcoxon(groups: list[pd.Series], alpha=0.05) -> None:
     """
     Function to perform either the t-test or the Wilcoxon test for dependent samples.
 
     Parameters:
-    df (DataFrame): DataFrame with data.
-    column1 (str): Name of the first column.
-    column2 (str): Name of the second column.
+    groups (list[Series]): The list of two groups to be tested.
     alpha (float): Significance level.
 
     Returns:
     None.
     """
-    groups = [df[column1], df[column2]]
+    if len(groups) != 2:
+        print('Invalid length.')
+        return
+
     if normality_test(groups, alpha) and homogeneity_var_test(groups, alpha):
         print('Conducting t-test...')
         ttest_paired(groups, alpha)

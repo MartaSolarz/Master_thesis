@@ -79,6 +79,31 @@ def plot_multi_boxplot(df: pd.DataFrame, category_param: str, continue_param: st
     plt.show()
 
 
+def plot_two_boxplots(A, B, label_A='A', label_B='B', label='Value', title='Boxplot dla grup A i B'):
+    """
+    Generates a boxplot for two series of continuous data.
+
+    Args:
+    A (pd.Series): The first series of continuous data.
+    B (pd.Series): The second series of continuous data.
+    label_A (str, optional): Label for series A. Default is 'A'.
+    label_B (str, optional): Label for series B. Default is 'B'.
+    label (str, optional): Label for the y-axis of the plot. Default is 'Value'.
+    title (str, optional): Title of the plot. Default is 'Boxplot dla grup A i B'.
+
+    Returns:
+    None
+    """
+    data = {label_A: A, label_B: B}
+    df = pd.DataFrame(data)
+    sns.set(style="whitegrid")
+    sns.boxplot(data=df, orient="v")
+    plt.title(title)
+    plt.grid(True, axis='y')
+    plt.ylabel(label)
+    plt.show()
+
+
 def plot_multi_density(df: pd.DataFrame, continue_param: str, category_param: str, label: str, label_legend: str, title="Wykres gęstości dla grup"):
     """
     Generates a density plot for multiple series of data based on a categorical parameter.
@@ -104,3 +129,28 @@ def plot_multi_density(df: pd.DataFrame, continue_param: str, category_param: st
     plt.legend(title=label_legend)
     plt.grid(True)
     plt.show()
+
+
+def plot_two_density(A, B, label_A='A', label_B='B', label='Value', title='Wykres gęstości dla grup A i B'):
+    """
+    Generates a density plot for two series of continuous data.
+
+    Args:
+    A (pd.Series): The first series of continuous data.
+    B (pd.Series): The second series of continuous data.
+    label_A (str, optional): Label for series A. Default is 'A'.
+    label_B (str, optional): Label for series B. Default is 'B'.
+    label (str, optional): Label for the x-axis of the plot. Default is 'Value'.
+    title (str, optional): Title of the plot. Default is 'Wykres gęstości dla grup A i B'.
+
+    Returns:
+    None
+    """
+    sns.set(style="whitegrid")
+    sns.kdeplot(A, label=label_A, fill=True)
+    sns.kdeplot(B, label=label_B, fill=True)
+    plt.xlabel(label)
+    plt.title(title)
+    plt.legend()
+    plt.show()
+

@@ -4,20 +4,20 @@ from scipy.stats import fisher_exact, chi2_contingency, spearmanr
 from functions.tests.helper import make_decision
 
 
-def two_categorical_variable_test(df: pd.DataFrame, dependent_variable: str, independent_variable: str, alpha=0.05):
+def two_categorical_variable_test(df: pd.DataFrame, variable1: str, variable2: str, alpha=0.05):
     """
     Conducts a statistical test between two categorical variables.
 
     Args:
     df (pd.DataFrame): The DataFrame containing the data.
-    dependent_variable (str): The name of the dependent variable.
-    independent_variable (str): The name of the independent variable.
+    variable1 (str): The name of the first variable.
+    variable2 (str): The name of the second variable.
     alpha (float): The significance level for the test. Default is 0.05.
 
     Returns:
     None
     """
-    tab = create_contingency_table(df, dependent_variable, independent_variable)
+    tab = create_contingency_table(df, variable1, variable2)
     print(tab)
     print('Chi2 test conducted...')
     p_value = chi2_test(tab)
