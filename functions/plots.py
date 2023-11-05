@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from functions.tests.categorical_only import create_contingency_table
+from functions.tests.helper import create_contingency_table
 
 
 def plot_heatmap(df: pd.DataFrame, column1: str, column2: str, label1: str, label2: str, title="", cmap="YlGnBu"):

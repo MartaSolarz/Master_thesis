@@ -53,3 +53,34 @@ def posthocNemenyi_test(df: pd.DataFrame, dependent_variable: str, independent_v
         table.append([df[independent_variable].unique()[i]] + row_values)
 
     print(tabulate(table, headers=[""] + headers, tablefmt="grid"))
+
+
+def posthocNemenyi2_test(df: pd.DataFrame, var: str, param='diff', alpha=0.05) -> None:
+    """
+    Conducts a posthoc Nemenyi test for non-parametric data sets and displays results in a table format.
+
+    Args:
+    df (DataFrame): The DataFrame containing the data.
+    var (str): The name of the independent variable.
+    param (str): The name of the dependent variable.
+    alpha (float): The significance level.
+
+    Returns:
+    None
+    """
+
+    groups = [df[param][df[var] == category] for category in pd.unique(df[var])]
+    nemenyi_result = posthoc_nemenyi(groups)
+
+    headers = [str(i) for i in df[var].unique()]
+    table = []
+    for i, row in enumerate(np.array(nemenyi_result)):
+        row_values = []
+        for p_value in row:
+            if p_value < alpha:
+                row_values.append(f"{Fore.RED}{p_value:.6f}{Style.RESET_ALL}")
+            else:
+                row_values.append(f"{p_value:.6f}")
+        table.append([df[var].unique()[i]] + row_values)
+
+    print(tabulate(table, headers=[""] + headers, tablefmt="grid"))

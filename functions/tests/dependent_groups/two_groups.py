@@ -1,11 +1,11 @@
 import pandas as pd
 import pingouin as pg
-from functions.tests.helper import make_decision
+from functions.tests.helper import make_decision, homogeneity_var_test, normality_test
 from statsmodels.stats.contingency_tables import mcnemar
-from scipy.stats import ttest_rel, shapiro, levene
+from scipy.stats import ttest_rel, wilcoxon
 
 
-def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, alpha=0.05) -> None:
+def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, yate_flag=False, alpha=0.05) -> None:
     """
     Function to perform McNemar's test for a 2x2 contingency table.
 
@@ -20,7 +20,10 @@ def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, alpha=0.05) -> No
     """
     table = pd.crosstab(df[column1], df[column2])
     print(table)
-    result = mcnemar(table)
+    if table.size == 1:
+        print('Only one sample')
+        return
+    result = mcnemar(table, exact=yate_flag)
     p_val = result.pvalue
     print('McNemar statistic:', result.statistic)
     print('p-value:', p_val)
@@ -39,8 +42,7 @@ def ttest_or_wilcoxon(groups: list[pd.Series], alpha=0.05) -> None:
     None.
     """
     if len(groups) != 2:
-        print('Invalid length.')
-        return
+        raise ValueError("Test requires two groups.")
 
     if normality_test(groups, alpha) and homogeneity_var_test(groups, alpha):
         print('Conducting t-test...')
@@ -72,7 +74,7 @@ def ttest_paired(groups: list[pd.Series], alpha=0.05) -> None:
     make_decision(p_value, alpha)
 
 
-def wilcoxon_test(groups: list[pd.Series], alpha=0.05) -> None:
+def wilcoxon_test(groups: list[pd.Series], alpha=0.05, method='auto') -> None:
     """
     Function to perform the Wilcoxon signed-rank test for paired samples.
 
@@ -86,46 +88,12 @@ def wilcoxon_test(groups: list[pd.Series], alpha=0.05) -> None:
     if len(groups) != 2:
         print('Invalid length.')
         return
-
-    result = pg.wilcoxon(groups[0], groups[1])
-    p_val = result['p-val'][0]
-    print('Wilcoxon statistic:', result['W-val'][0])
+    try:
+        result = wilcoxon(groups[0], groups[1], method=method)
+    except ValueError:
+        print('only one sample')
+        return
+    p_val = result.pvalue
+    print('Wilcoxon statistic:', result.statistic)
     print('p-value:', p_val)
     make_decision(p_val, alpha)
-
-
-def normality_test(groups: list[pd.Series], alpha=0.05) -> bool:
-    """
-    Conducts a test to check if the distribution is Gaussian.
-
-    Args:
-    groups (list[pd.Series]): The list of groups to be tested for normality.
-    alpha (float): The significance level for the test.
-
-    Returns:
-    bool: True if all groups have a Gaussian distribution, False otherwise.
-    """
-    print('Conducting normality test...')
-    all_normal = True
-    for data in groups:
-        stats, p_value = shapiro(data)
-        if p_value < alpha:
-            all_normal = False
-    return all_normal
-
-def homogeneity_var_test(groups: list[pd.Series], alpha=0.05) -> bool:
-    """
-    Conducts a homogeneity variance test.
-
-    Args:
-    groups (list[pd.Series]): The list of groups to be tested for normality.
-    alpha (float): The significance level for the test.
-
-    Returns:
-    bool: True if variances are homogeneity, False otherwise.
-    """
-    print('Conducting homogeneity variance test...')
-    _, p_value = levene(*groups)
-    if p_value < alpha:
-        return False
-    return True

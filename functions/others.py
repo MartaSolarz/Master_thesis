@@ -48,3 +48,36 @@ def choose_dominant_kind(x):
         return 'Wzrokowiec'
     else:
         return "Brak dominującego"
+
+
+def change_to_ranges_podst(x):
+    if x == '30 - 49%':
+        return 1
+    elif x == '50 - 69%':
+        return 2
+    elif x == '70 - 89%':
+        return 3
+    elif x == '90 - 100%':
+        return 4
+
+
+def change_to_ranges_roz(x):
+    if x == 'NO_VAL':
+        return 0
+    elif x == 'poniżej 20%':
+        return 1
+    elif x == '20 - 49%':
+        return 2
+    elif x == '50 - 70%':
+        return 3
+    elif x == 'powyżej 70%':
+        return 4
+
+def replace_to_categories(x):
+    x = int(x)
+    if x < 3:
+        return 'niski'
+    elif x == 3:
+        return 'średni'
+    else:
+        return 'wysoki'
