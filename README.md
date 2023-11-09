@@ -3,7 +3,7 @@
 ## Zmienne:
 
 | Nazwa                                                                                                                                                        | Typ                                                                  |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+|:-:|:-:|
 | poprawność odpowiedzi                                                                                                                                        | porządkowa (sumy), kategoryczna binarna (kolekcje, osobne grafiki), ilościowa (średnie) |
 | trudność zadania                                                                                                                                             | porządkowa (poszczególne wartości, sumy), ilościowa (średnie)                                                        |
 | czas odpowiedzi                                                                                                                                              | ilościowa ciągła                                                     |
@@ -58,9 +58,26 @@
 
 ### 3. Dla dwóch grup: → grupy niezależne (sumy grafik, każda grafika osobno)
 
+| Typ zmiennej  |  Test | Dane testowane  |
+|:-:|---|---|
+| nominalna  | test Chi2, jeśli liczebność próbki dla każdej grupy co najmniej 5, dokładny test Fishera w p.p.  | Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi dla każdej grafiki osobno między <br/>- mężczyznami a kobietami? **(general-5)** <br/>- osobami z wadami wzroku a osobami bez wad wzroku? **(general-5)** <br/>- osobami, które pisały daną maturę a osobami, które nie pisały? **(general-5)** <br/>- osobami które w pytaniu 1 o preferencję przed badaniem wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które w pytaniu 1 o preferencję po badaniu wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 1 a osobami, które nie zmieniły zdania? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 2 a osobami, które nie zmieniły zdania? **(general-4)** <br/>Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi w zależności od ostatniego odwiedzonego AOI? (1a, 2a, 3a) **(general-8)**  |
+| porządkowa  | test Manna-Whitney’a  | Czy istnieje istotna statystycznie różnica w ocenie trudności zadania w zależności od poprawności? **(general-1)** <br/>Czy istnieje istotna statystycznie różnica w ocenie trudności zadania między <br/>- mężczyznami a kobietami? **(general-6)** <br/>- osobami z wadami wzroku a osobami bez wad wzroku? **(general-6)** <br/>- osobami, które pisały daną maturę a osobami, które nie pisały?  **(general-6)** <br/>- osobami które w pytaniu 1 o preferencję przed badaniem wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które w pytaniu 1 o preferencję po badaniu wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 1 a osobami, które nie zmieniły zdania? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 2 a osobami, które nie zmieniły zdania? **(general-4)** <br/>Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi dla zsumowanych grafik (poprawność traktujemy rangowo) między <br/>- mężczyznami a kobietami? **(general-5)** <br/> -osobami z wadami wzroku a osobami bez wad wzroku? **(general-5)** <br/>- osobami, które pisały daną maturę a osobami, które nie pisały? **(general-5)** <br/>Czy istnieje istotna statystycznie różnica w ocenie trudności zadania w zależności od ostatniego odwiedzonego AOI? (1a, 2a, 3a) **(general-8)** |
+| ilościowa   | test t-Studenta dla grup niezależnych (jeśli rozkład normalny dla obu grup, zachowana homogeniczność wariancji, zbliżona liczebność grup); test Manna-Whitney’a w p.p.  | Czy istnieje istotna statystycznie różnica w czasie odpowiedzi między <br/>- mężczyznami a kobietami? **(general-7)** <br/>- osobami z wadami wzroku a osobami bez wad wzroku? **(general-7)** <br/>- osobami, które pisały daną maturę a osobami, które nie pisały? **(general-7)** <br/>- osobami które w pytaniu 1 o preferencję przed badaniem wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które w pytaniu 1 o preferencję po badaniu wybrały A a osobami, które wybrały B? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 1 a osobami, które nie zmieniły zdania? **(general-4)** <br/>- osobami które zmieniły zdanie w pytaniu 2 a osobami, które nie zmieniły zdania? **(general-4)**  |
 ### 4. Dla więcej niż dwóch grup: → grupy niezależne (sumy grafik, każda grafika osobno)
 
+| Typ zmiennej  |  Test | Dane testowane  |
+|:-:|---|---|
+| nominalna  | test Chi2, jeśli założenia nie są spełnione: test Chi2 z korektą Yate’s  | Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi w zależności od oceny trudności zadania? **(general-1)** <br/>Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi dla każdej grafiki osobno między <br/>- osobami urodzonymi w różnych latach? **(general-5)** <br/>- osobami na różnych latach studiów? **(general-5)** <br/>- osobach na różnych kierunkach studiów? **(general-5)** <br/>- osobach na różnych specjalnościach? **(general-5)** <br/>- osobami które w pytaniu 2 o preferencję przed badaniem wybrały różne formy? **(general-4)** <br/>- osobami które w pytaniu 2 o preferencję po badaniu wybrały różne formy? **(general-4)** <br/>- osobami, u których dominuje dany typ uczenia poznawczego? **(general-5)** <br/>- osobami, które uzyskały różne wyniki matur (rangowo)? **(general-5)** <br/>- osobami o różnych poziomach samopoczucia? **(general-5)** <br/>- osobami o różnych poziomach stresu? **(general-5)** <br/>- osobami o różnych poziomach zmęczenia? **(general-5)** <br/>- osobami o różnych umiejętnościach czytania map? **(general-5)** <br/>- osobami o różnych umiejętnościach analitycznego myślenia? **(general-5)** <br/>- osobami o różnej spostrzegawczości? **(general-5)** <br/>- osobami o różnej podzielności uwagi? **(general-5)** <br/>- osobami o różnych umiejętnościach czytania ze zrozumieniem? **(general-5)** <br/>Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi w zależności od ostatniego odwiedzonego AOI? (1b, 2b, 3b) **(general-8)**  |
+| porządkowa  | test Kruskala-Wallisa  | Czy istnieje istotna statystycznie różnica w ocenie trudności zadania między <br/>- osobami urodzonymi w różnych latach? **(general-6)** <br/>- osobami na różnych latach studiów? **(general-6)** <br/>- osobach na różnych kierunkach studiów? **(general-6)** <br/>- osobach na różnych specjalnościach? **(general-6)** <br/>- osobami które w pytaniu 2 o preferencję przed badaniem wybrały różne formy? **(general-4)** <br/>- osobami które w pytaniu 2 o preferencję po badaniu wybrały różne formy? **(general-4)** <br/>- osobami, u których dominuje dany typ uczenia poznawczego? **(general-6)** <br/>- osobami, które uzyskały różne wyniki matur (rangowo)? **(general-6)** <br/>- osobami o różnych poziomach samopoczucia? **(general-6)** <br/>- osobami o różnych poziomach stresu? **(general-6)** <br/>- osobami o różnych poziomach zmęczenia? **(general-6)** <br/>- osobami o różnych umiejętnościach czytania map? **(general-6)** <br/>- osobami o różnych umiejętnościach analitycznego myślenia? **(general-6)** <br/>- osobami o różnej spostrzegawczości? **(general-6)** <br/>- osobami o różnej podzielności uwagi? **(general-6)** <br/>- osobami o różnych umiejętnościach czytania ze zrozumieniem?  **(general-6)** <br/>Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi dla zsumowanych grafik (poprawność nabiera rangowego charakteru) między <br/>- osobami urodzonymi w różnych latach? **(general-5)** <br/>- osobami na różnych latach studiów? **(general-5)** <br/>- osobach na różnych kierunkach studiów? **(general-5)** <br/>- osobach na różnych specjalnościach? **(general-5)** <br/>- osobami, u których dominuje dany typ uczenia poznawczego? **(general-5)** <br/>- osobami, które uzyskały różne wyniki matur (rangowo)? **(general-5)** <br/>- osobami o różnych poziomach samopoczucia? **(general-5)** <br/>- osobami o różnych poziomach stresu? **(general-5)** <br/>- osobami o różnych poziomach zmęczenia? **(general-5)** <br/>- osobami o różnych umiejętnościach czytania map? **(general-5)** <br/>- osobami o różnych umiejętnościach analitycznego myślenia? **(general-5)** <br/>- osobami o różnej spostrzegawczości? **(general-5)** <br/>- osobami o różnej podzielności uwagi? **(general-5)** <br/>- osobami o różnych umiejętnościach czytania ze zrozumieniem? **(general-5)** <br/>Czy istnieje istotna statystycznie różnica w ocenie trudności zadania w zależności od ostatniego odwiedzonego AOI? (1b, 2b, 3b) **(general-8)**  |
+| ilościowa   | test ANOVA dla grup niezależnych (jeśli rozkład normalny dla wszystkich grup, zachowana homogeniczność wariancji, liczebność każdej grupy co najmniej 20); test Kruskala-Wallisa w p.p.  | Czy istnieje istotna statystycznie różnica w czasie odpowiedzi między <br/>- osobami urodzonymi w różnych latach? **(general-7)** <br/>- osobami na różnych latach studiów? **(general-7)** <br/>- osobach na różnych kierunkach studiów? **(general-7)** <br/>- osobach na różnych specjalnościach? **(general-7)** <br/>- osobami które w pytaniu 2 o preferencję przed badaniem wybrały różne formy? **(general-4)** <br/>- osobami które w pytaniu 2 o preferencję po badaniu wybrały różne formy? **(general-4)** <br/>- osobami, u których dominuje dany typ uczenia poznawczego? **(general-7)** <br/>- osobami, które uzyskały różne wyniki matur (rangowo)? **(general-7)** <br/>- osobami o różnych poziomach samopoczucia? **(general-7)** <br/>- osobami o różnych poziomach stresu? **(general-7)** <br/>- osobami o różnych poziomach zmęczenia? **(general-7)** <br/>- osobami o różnych umiejętnościach czytania map? **(general-7)** <br/>- osobami o różnych umiejętnościach analitycznego myślenia? **(general-7)** <br/>- osobami o różnej spostrzegawczości? **(general-7)** <br/>- osobami o różnej podzielności uwagi? **(general-7)** <br/>- osobami o różnych umiejętnościach czytania ze zrozumieniem? **(general-7)**  |
+
 ## Testy dla redundancji (czyli dla dwóch grup zależnych):
+
+| Typ zmiennej  |  Test | Dane testowane  |
+|:-:|---|---|
+| nominalne  | test McNemara https://www.ncbi.nlm.nih.gov/books/NBK560699/#:~:text=The%20McNemar%20test%20is%20a,variable%20with%20two%20dependent%20groups.  | Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi między grupami A vs B? **(redundancy-1)** <br/> Czy istnieje istotna statystycznie różnica w poprawności odpowiedzi dla: <br/>- kobiet/mężczyzn  <br/>- danego roku urodzenia <br/>- danego roku studiów <br/>- danego kierunku studiów <br/>- danej specjalności <br/>- wady wzroku / braku wady <br/>- osób piszących maturę z przedmiotu X / osób nie piszących <br/>- dominującego typu uczenia poznawczego <br/>- ilości snu <br/>- poziomu samopoczucia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu stresu (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu zmęczenia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności czytania map (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- podzielności uwagi (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności analitycznego myślenia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu spostrzegawczości (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności czytania ze zrozumieniem (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- odpowiedzi na pytanie 1 przed badaniem (preferencja A vs B) <br/>- odpowiedzi na pytanie 1 po badaniu (preferencja A vs B) <br/>- odpowiedzi na pytanie 2 przed badaniem (preferencja mapa, tabela, tekst, wykres) <br/>- odpowiedzi na pytanie 2 po badaniu (preferencja mapa, tabela, tekst, wykres) <br/>- osób które zmieniły zdanie w pytaniu 1 / osób, które nie zmieniły <br/>- osób które zmieniły zdanie w pytaniu 2 / osób, które nie zmieniły <br/>między grupami A vs B? **(redundancy-3)**  |
+| porządkowe | test Wilcoxona  | Czy istnieje istotna statystycznie różnica w ocenie trudności zadania między grupami A vs B? **(redundancy-1)** <br/> Czy istnieje istotna statystycznie różnica w ocenie trudności zadania dla: <br/>- kobiet/mężczyzn  <br/>- danego roku urodzenia <br/>- danego roku studiów <br/>- danego kierunku studiów <br/>- danej specjalności <br/>- wady wzroku / braku wady <br/>- osób piszących maturę z przedmiotu X / osób nie piszących <br/>- <br/>- dominującego typu uczenia poznawczego <br/>- ilości snu <br/>- poziomu samopoczucia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu stresu (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu zmęczenia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności czytania map (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- podzielności uwagi (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności analitycznego myślenia (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- poziomu spostrzegawczości (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- umiejętności czytania ze zrozumieniem (niski = 1,2; średni = 3; wysoki = 4,5) <br/>- odpowiedzi na pytanie 1 przed badaniem (preferencja A vs B) <br/>- odpowiedzi na pytanie 1 po badaniu (preferencja A vs B) <br/>- dpowiedzi na pytanie 2 przed badaniem (preferencja mapa, tabela, tekst, wykres) <br/>- odpowiedzi na pytanie 2 po badaniu (preferencja mapa, tabela, tekst, wykres) <br/>- osób które zmieniły zdanie w pytaniu 1 / osób, które nie zmieniły <br/>- osób które zmieniły zdanie w pytaniu 2 / osób, które nie zmieniły  <br/>między grupami A vs B? **(redundancy-4)**  |
+| ilościowe  | test t-Studenta dla grup zależnych (jeśli rozkład normalny dla obu grup); test Wilcoxona w p.p. | Czy istnieje istotna statystycznie różnica w czasie odpowiedzi między grupami A vs B? **(redundancy-1)** <br/> Czy istnieje istotna statystycznie różnica w całkowitej długości fiksacji/wizyt między grupami A vs B? **(redundancy-2)** <br/> Czy istnieje istotna statystycznie różnica w średniej długości fiksacji/wizyt między grupami A vs B? **(redundancy-2)** <br/> Czy istnieje istotna statystycznie różnica w liczbie fiksacji/wizyt między grupami A vs B? **(redundancy-2)** <br/> Czy istnieje istotna statystycznie różnica w średniej poprawności odpowiedzi między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średniej ocenie trudności zadania między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średnim czasie odpowiedzi między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średniej całkowitych długości fiksacji/wizyt między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średniej średnich długości fiksacji/wizyt między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średniej średnich wielkości źrenicy między grupami A vs B? <br/> Czy istnieje istotna statystycznie różnica w średniej liczbie fiksacji/wizyt między grupami A vs B? <br/> <br/> ANALIZA MAPA A VS MAPA B <br/> Czy istnieje istotna statystycznie różnica w całkowitej długości fiksacji/wizyt między grupami mapa A vs mapa B? <br/> Czy istnieje istotna statystycznie różnica w średniej długości fiksacji/wizyt między grupami mapa A vs mapa B? <br/> Czy istnieje istotna statystycznie różnica w liczbie fiksacji/wizyt między grupami mapa A vs mapa B?  <br/> Czy istnieje istotna statystycznie różnica w średniej całkowitych długości fiksacji/wizyt między grupami mapa A vs mapa B? <br/> Czy istnieje istotna statystycznie różnica w średniej średnich długości fiksacji/wizyt między grupami mapa A vs mapa B? <br/> Czy istnieje istotna statystycznie różnica w średniej średnich wielkości źrenicy między grupami mapa A vs mapa B? <br/> Czy istnieje istotna statystycznie różnica w średniej liczbie fiksacji/wizyt między grupami mapa A vs mapa B?|
 
 ### Analiza wieloczynnikowa 
 
@@ -86,42 +103,43 @@ Stosujemy dwa podejścia:
 
 → Metoda: Linear Mixed Effects Models - statsmodels 0.14.0 → OK
 
-Zmienne zależne:
-poprawność
-trudność
-czas odpowiedzi
-całkowita długość fiksacji/wizyt
-średnia długość fiksacji/wizyt
-średnia wielkość źrenicy
-liczba fiksacji/wizyt
-Zmienne niezależne: – cechy osobowe z ankiety + grupa (A, B)
-Stosujemy dwa podejścia:
-zmienne objaśniające: grupa (A/B) + cecha osobowa (oddzielnie) → jako dwie oddzielne kolumny
-zmienna objaśniająca: grupa (A/B) + cecha osobowa (razem) → jako scalenie kolumn
+**Zmienne zależne:**
+- poprawność
+- trudność
+- czas odpowiedzi
+- całkowita długość fiksacji/wizyt
+- średnia długość fiksacji/wizyt
+- średnia wielkość źrenicy
+- liczba fiksacji/wizyt
 
-Analiza mapa vs tabela vs tekst vs wykres - grafiki B
+**Zmienne niezależne: – cechy osobowe z ankiety + grupa (A, B)**
+
+Stosujemy dwa podejścia:
+- zmienne objaśniające: grupa (A/B) + cecha osobowa (oddzielnie) → jako dwie oddzielne kolumny
+- zmienna objaśniająca: grupa (A/B) + cecha osobowa (razem) → jako scalenie kolumn
+
+#### 3. Analiza mapa vs tabela vs tekst vs wykres - grafiki B
+
 → Metoda: ANOVA statsmodels.stats.anova.AnovaRM - statsmodels 0.14.0 → OK
 
-SUMY:
-– Czy istnieje istotna statystycznie różnica w sumie całkowitych długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
-– Czy istnieje istotna statystycznie różnica w sumie średnich długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
-– Czy istnieje istotna statystycznie różnica w sumie liczb fiksacji/wizyt między poszczególnymi formami prezentacji danych? 
-
-POSZCZEGÓLNE DANE:
+**POSZCZEGÓLNE DANE:**
 – Czy istnieje istotna statystycznie różnica w całkowitej długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w średniej długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w średniej wielkości źrenicy między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w liczbie fiksacji/wizyt między poszczególnymi formami prezentacji danych? 
 
-ŚREDNIE:
+**SUMY:**
+– Czy istnieje istotna statystycznie różnica w sumie całkowitych długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w sumie średnich długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w sumie liczb fiksacji/wizyt między poszczególnymi formami prezentacji danych? 
+
+**ŚREDNIE:**
 – Czy istnieje istotna statystycznie różnica w średniej całkowitych długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w średniej średnich długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w średniej średnich wielkości źrenicy między poszczególnymi formami prezentacji danych?
 – Czy istnieje istotna statystycznie różnica w średniej liczbie fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 
-
-
-## Założenia dotyczące testów:
+## Założenia dotyczące testów
 
 1. Test niezależności chi2-Pearsona
 - niezależność prób
