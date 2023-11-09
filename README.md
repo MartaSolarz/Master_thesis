@@ -4,60 +4,122 @@
 
 | Nazwa                                                                                                                                                        | Typ                                                                  |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| poprawność odpowiedzi                                                                                                                                        | kategoryczna (sumy), kategoryczna binarna (kolekcje, osobne grafiki) |
-| trudność zadania                                                                                                                                             | kategoryczna                                                         |
+| poprawność odpowiedzi                                                                                                                                        | porządkowa (sumy), kategoryczna binarna (kolekcje, osobne grafiki), ilościowa (średnie) |
+| trudność zadania                                                                                                                                             | porządkowa (poszczególne wartości, sumy), ilościowa (średnie)                                                        |
 | czas odpowiedzi                                                                                                                                              | ilościowa ciągła                                                     |
-| questions 1,2 (preferencje A vs B) oraz (mapa, tabela, tekst, wykres)                                                                                        | kategoryczne                                                         |
-| cechy osobowe (płeć, rok urodzenia, kierunek studiów, rok studiów, specjalność, wady wzroku, ilość snu, wyniki matur, umiejętności, typ uczenia poznawczego) | kategoryczne                                                         |
+| questions 1,2 (preferencje A vs B) oraz (mapa, tabela, tekst, wykres)                                                                                        | nominalne                                                         |
+| cechy osobowe (płeć, kierunek studiów, specjalność, wady wzroku, wyniki matur (pisał vs. nie pisał), dominujący typ uczenia poznawczego) | nominalne                                                       |
+| cechy osobowe (rok urodzenia, rok studiów, ilość snu, wyniki matur (rangowo), umiejętności, siła poszczególnych typów uczenia poznawczego) | porządkowe                                                         |
 | całkowita długość fiksacji/wizyty, średnia długość fiksacji/wizyty, średnia wielkość źrenicy                                                                 | ilościowe ciągłe                                                     |
 | liczba fiksacji/wizyty                                                                                                                                       | ilościowe dyskretne                                                  |
-| ostatnie odwiedzone AOI                                                                                                                                      | kategoryczna                                                         |
+| ostatnie odwiedzone AOI                                                                                                                                      | nominalne                                                         |
+
+## Zbiory testowe:
+
+### Ogólne testy:
+- każda grafika osobno: 1a, 1b, 2a, 2b, 3a, 3b → 40 próbek w każdym zbiorze → GRUPY NIEZALEŻNE
+- zsumowane grafiki: wszystkie, A, B, 1, 2, 3 → sumujemy wyniki poszczególnych badanych, czyli 40 próbek w każdym zbiorze → GRUPY NIEZALEŻNE
+- (tylko do wizualizacji) kolekcje grafik: wszystkie, A, B, 1, 2, 3 → “powielamy” wyniki tzn. zbieramy wszystkie odpowiedzi do jednej kolumny (np. jeśli rozważamy kolekcję grafik 1 to wówczas do jednej kolumny ustawiamy wyniki z 1a i 1b czyli mamy 80 próbek; a dla np. kolekcji A – 120 próbek itd.) → GRUPY ZALEŻNE
+
+### Redundancja (A vs B):
+- zsumowane wyniki A vs zsumowane wyniki B → 40 próbek → GRUPY ZALEŻNE
+- kolekcja grafik A vs kolekcja grafik B → 120 próbek → GRUPY ZALEŻNE
+- 1a vs 1b → 40 próbek → GRUPY ZALEŻNE
+- 2a vs 2b → 40 próbek → GRUPY ZALEŻNE
+- 3a vs 3b → 40 próbek → GRUPY ZALEŻNE
+
+## Ogólne testy
+
+### 1. Porównanie trzech grup: → test dla grup zależnych (test Friedmana)
+- Czy istnieje zależność w poprawności odpowiedzi dla trzech grup grafik (grafiki 1, 2, 3; grafiki 1a, 2a, 3a; grafiki 1b, 2b, 3b)? **(general-0)**
+- Czy istnieje zależność w ocenie trudności zadania dla trzech grup grafik (grafiki 1, 2, 3; grafiki 1a, 2a, 3a; grafiki 1b, 2b, 3b)? **(general-0)**
+- Czy istnieje zależność w czasie odpowiedzi dla trzech grup grafik (grafiki 1, 2, 3; grafiki 1a, 2a, 3a; grafiki 1b, 2b, 3b)? **(general-0)**
+
+### 2. Korelacje: → test dla grup niezależnych (sumy grafik, każda grafika osobno)
+
+**Poprawność:**
+
+→ korelacja punkt-biserial (dla każdej grafiki osobno)/korelacja Pearsona/ korelacja rang Spearmana (jeśli nie są spełnione założenia korelacji Pearsona tj. normalność, homogeniczność wariancji)
+
+- Czy istnieje istotna statystycznie korelacja między poprawnością odpowiedzi a czasem odpowiedzi? **(general-2)**
+- Czy istnieje istotna statystycznie korelacja między poprawnością odpowiedzi a całkowitą/ średnią długością fiksacji/wizyt? **(general-8/9)**
+- Czy istnieje istotna statystycznie korelacja między poprawnością odpowiedzi a średnią wielkością źrenicy? **(general-8)**
+- Czy istnieje istotna statystycznie korelacja między poprawnością odpowiedzi a liczbą fiksacji / wizyt? **(general-8/9)**
+
+**Trudność zadania:**
+
+→ korelacja rang Spearmana (dane uporządkowane)
+
+- Czy istnieje istotna statystycznie korelacja między oceną trudności zadania a czasem odpowiedzi? **(general-3)**
+- Czy istnieje istotna statystycznie korelacja między oceną trudności zadania a całkowitą/ średnią długością fiksacji/wizyt? **(general-8/9)**
+
+- Czy istnieje istotna statystycznie korelacja między oceną trudności zadania a średnią wielkością źrenicy? **(general-8)**
+- Czy istnieje istotna statystycznie korelacja między trudnością zadania a liczbą fiksacji / wizyt? **(general-8/9)**
+
+### 3. Dla dwóch grup: → grupy niezależne (sumy grafik, każda grafika osobno)
+
+### 4. Dla więcej niż dwóch grup: → grupy niezależne (sumy grafik, każda grafika osobno)
+
+## Testy dla redundancji (czyli dla dwóch grup zależnych):
+
+### Analiza wieloczynnikowa 
+
+#### 1. Szczegółowe wartości zmiennych zależnych:
+→ Metoda: Linear Mixed Effects Models - statsmodels 0.14.0 → OK
+
+**Zmienne zależne:**
+- poprawność
+- trudność
+- czas odpowiedzi
+- całkowita długość fiksacji/wizyt
+- średnia długość fiksacji/wizyt
+- średnia wielkość źrenicy
+- liczba fiksacji/wizyt
+
+**Zmienne niezależne: – cechy osobowe z ankiety + grupa (A, B)**
+
+Stosujemy dwa podejścia:
+- zmienne objaśniające: grupa (A/B) + cecha osobowa (oddzielnie) → jako dwie oddzielne kolumny
+- zmienna objaśniająca: grupa (A/B) + cecha osobowa (razem) → jako scalenie kolumn
+
+#### 2. Średnie wartości zmiennych zależnych (liczymy średnie dla 1, 2, 3 w grupach A, B dla każdej osoby)  - kolekcja - 80 wierszy
+
+→ Metoda: Linear Mixed Effects Models - statsmodels 0.14.0 → OK
+
+Zmienne zależne:
+poprawność
+trudność
+czas odpowiedzi
+całkowita długość fiksacji/wizyt
+średnia długość fiksacji/wizyt
+średnia wielkość źrenicy
+liczba fiksacji/wizyt
+Zmienne niezależne: – cechy osobowe z ankiety + grupa (A, B)
+Stosujemy dwa podejścia:
+zmienne objaśniające: grupa (A/B) + cecha osobowa (oddzielnie) → jako dwie oddzielne kolumny
+zmienna objaśniająca: grupa (A/B) + cecha osobowa (razem) → jako scalenie kolumn
+
+Analiza mapa vs tabela vs tekst vs wykres - grafiki B
+→ Metoda: ANOVA statsmodels.stats.anova.AnovaRM - statsmodels 0.14.0 → OK
+
+SUMY:
+– Czy istnieje istotna statystycznie różnica w sumie całkowitych długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w sumie średnich długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w sumie liczb fiksacji/wizyt między poszczególnymi formami prezentacji danych? 
+
+POSZCZEGÓLNE DANE:
+– Czy istnieje istotna statystycznie różnica w całkowitej długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w średniej długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w średniej wielkości źrenicy między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w liczbie fiksacji/wizyt między poszczególnymi formami prezentacji danych? 
+
+ŚREDNIE:
+– Czy istnieje istotna statystycznie różnica w średniej całkowitych długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w średniej średnich długości fiksacji/wizyt między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w średniej średnich wielkości źrenicy między poszczególnymi formami prezentacji danych?
+– Czy istnieje istotna statystycznie różnica w średniej liczbie fiksacji/wizyt między poszczególnymi formami prezentacji danych?
 
 
-*kategoryczna - zmienna o charakterze jakościowym, skończona liczba osiąganych wartości
-
-## Testy ogólne
-
-**H0:** Brak istotnej statystycznie zależności między X a Y.
-
-**H1:** Istnieje istotna statystycznie zależność między X a Y.
-
-**Poziom istotności:** $\alpha = 0.05$.
-
-| NR TESTU | X                                                | Y                                                                                                       | TEST                                               |
-|----------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| 1        | poprawność odpowiedzi                            | trudność zadania                                                                                        | chi2                                               |
-| 2        | poprawność odpowiedzi                            | czas odpowiedzi                                                                                         | ANOVA/Kruskal-Wallis                               |
-| 3        | czas odpowiedzi                                  | trudność zadania                                                                                        | ANOVA/Kruskal-Wallis                               |
-| 4        | poprawność odpowiedzi                            | quest1/2                                                                                                | chi2                                               |
-| 5        | poprawność odpowiedzi                            | cechy osobowe                                                                                           | chi2                                               |
-| 6        | trudność zadania                                 | cechy osobowe                                                                                           | chi2                                               |
-| 7        | czas odpowiedzi                                  | cechy osobowe                                                                                           | ANOVA/Kruskal-Wallis                               |
-| 8        | 1) poprawność odpowiedzi<br/>2) trudność zadania | całkowita, średnia długość fiksacji, średnia wielkość źrenicy, liczba fiksacji, ostatnie odwiedzone AOI | ANOVA/Kruskal-Wallis, t-Student/Mann-Whitney, chi2 |
-| 9        | 1) poprawność odpowiedzi<br/>2) trudność zadania | całkowita, średnia długość wizyty, liczba wizyt                                                         | ANOVA/Kruskal-Wallis, t-Student/Mann-Whitney       |
-
-
-## Flow wyboru testu:
-
-### Case'y:
-
-**Mamy dwie zmienne kategoryczne:**
-- test chi2
-- jeśli nie można chi2: korelacja rang Spearmana ??? (dokładny test Fishera odpada, bo musi być tabela kontyngencji 2x2, a zazwczaj u nas jest większa...)
-- posthoc: test Nemenyi (nieparametryczna)
-
-**Mamy zmienną kategoryczną i zmienną ilościową dyskretną:**
-1. Jeśli zmienna kategoryczna jest binarna (mamy tylko dwie grupy):
-   - test t-Studenta 
-   - jeśli nie można t-Studenta: test Manna-Whitney'a
-2. Jeśli zmienna katogoryczna przyjmuje więcej niż dwie wartości:
-   - test ANOVA
-   - jeśli nie można ANOVA: test Kruskala-Wallisa
-   - posthoc: Tukey/Nemenyi (parametryczna vs nieparametryczna)
-
-**Mamy zmienną kategoryczną i zmienną ilościową ciągłą:**
-- test ANOVA
-- jeśli nie można ANOVA: test Kruskala-Wallisa
 
 ## Założenia dotyczące testów:
 
