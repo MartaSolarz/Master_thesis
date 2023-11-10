@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from statsmodels.regression.mixed_linear_model import MixedLM
 from statsmodels.stats.anova import AnovaRM
 from functions.tests.helper import make_decision
