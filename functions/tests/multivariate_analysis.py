@@ -20,14 +20,19 @@ def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.0
     """
     md = MixedLM.from_formula(formula, data=df, groups=df[subject])
     mdf = md.fit()
-    print(mdf.summary())
 
     p_values = mdf.pvalues[1:-1]
     names = mdf.model.exog_names[1:]
+    flag = False
     for i, p_val in enumerate(p_values):
-        print('-------------------')
-        print(f"Zmienna: {names[i]}, P-value: {p_val:.10f}")
-        make_decision(p_val, alpha)
+        if p_val < alpha:
+            print('-------------------')
+            print(f"Zmienna: {names[i]}, P-value: {p_val:.10f}")
+            flag = True
+            make_decision(p_val, alpha)
+
+    if flag:
+        print(mdf.summary())
 
 
 def anova(df: pd.DataFrame, depvar: str, groups: list, subject='ID', alpha=0.05):
