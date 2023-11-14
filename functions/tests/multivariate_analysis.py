@@ -4,7 +4,7 @@ from statsmodels.stats.anova import AnovaRM
 from functions.tests.helper import make_decision
 
 
-def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.05):
+def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.05, statistically_significant=[], flagPrint=False, flagPrintAll=False) -> list:
     """
     Performs linear mixed effects modeling on the provided data.
 
@@ -13,26 +13,36 @@ def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.0
     formula (str): Formula specifying the model structure.
     subject (str): Name of the column containing the identifier of the research subjects.
     alpha (float): Significance level.
+    statistically_significant (list[str]): Aggregate statistically significant variables.
+    flagPrint (bool): Decision about printing - True - possible to print, False - no printing at all.
+    flagPrintAll (bool): If True - print all summaries, if False - print only statistically significant.
 
     Returns:
-    None: Displays the summary of the linear mixed effects model and the statistical decisions made.
+    list[str].
 
     """
+    lenStarted = len(statistically_significant)
     md = MixedLM.from_formula(formula, data=df, groups=df[subject])
     mdf = md.fit()
 
     p_values = mdf.pvalues[1:-1]
     names = mdf.model.exog_names[1:]
-    flag = False
     for i, p_val in enumerate(p_values):
         if p_val < alpha:
-            print('-------------------')
-            print(f"Zmienna: {names[i]}, P-value: {p_val:.10f}")
-            flag = True
-            make_decision(p_val, alpha)
+            if flagPrint:
+                print('-------------------')
+                print(f"Zmienna: {names[i]}, P-value: {p_val:.10f}")
+                make_decision(p_val, alpha)
+            flagPrintAll = True
+            statistically_significant.append(f'{names[i]}')
 
-    if flag:
+    if flagPrintAll and flagPrint:
         print(mdf.summary())
+
+    if lenStarted == len(statistically_significant):
+        statistically_significant.append('')
+
+    return statistically_significant
 
 
 def anova(df: pd.DataFrame, depvar: str, groups: list, subject='ID', alpha=0.05):
