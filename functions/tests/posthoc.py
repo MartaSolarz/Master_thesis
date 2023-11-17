@@ -5,6 +5,32 @@ import numpy as np
 from tabulate import tabulate
 from colorama import Fore, Style
 from scikit_posthocs import posthoc_nemenyi
+import pingouin as pg
+from functions.tests.helper import make_decision
+
+def anova_posthoc(df: pd.DataFrame, dependent_variable: str, independent_variable: str, subject='ID', alpha=0.05):
+    """
+    Perform post hoc analysis following ANOVA.
+
+    Args:
+    df (pd.DataFrame): DataFrame containing the data.
+    dependent_variable (str): Name of the dependent variable column.
+    independent_variable (str): Name of the independent variable column.
+    subject (str): Name of the column containing subject IDs (default='ID').
+    alpha (float): Significance level (default=0.05).
+
+    Returns:
+    None: Prints pairwise comparisons and corrected p-values.
+    """
+
+    posthoc = pg.pairwise_tests(dv=dependent_variable, within=independent_variable, subject=subject, data=df, padjust='holm')
+    result = posthoc[['A', 'B', 'p-corr']]
+
+    for index, row in result.iterrows():
+        print('-----------------------')
+        print(f"Groups: {row['A']} vs {row['B']}")
+        print(f"P-value: {row['p-corr']}")
+        make_decision(row['p-corr'], alpha)
 
 
 def posthocTukey_test(df: pd.DataFrame, dependent_variable: str, independent_variable: str) -> None:
