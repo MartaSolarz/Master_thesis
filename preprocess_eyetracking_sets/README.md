@@ -1,4 +1,6 @@
-Preprocess eyetracking sets:
-- fixations (example for 3B image)
+Preprocess eyetracking sets - example files:
+- fixations
 - visits
 - sequence of AOIs
+- time
+- survey
