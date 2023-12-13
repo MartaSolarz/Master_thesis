@@ -1,0 +1,2476 @@
+OCENA TRUDNOŚCI ZADANIA
+
+Sum_Diff
+Płeć
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9868   
+Min. group size:   2       Log-Likelihood:     -159.0563
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.765    0.371 20.951 0.000  7.038  8.491
+Płeć[T.M]     -0.740    0.515 -1.439 0.150 -1.749  0.268
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var      1.594    0.592                           
+========================================================
+"
+
+Rok_urodzenia
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                1.9869   
+Min. group size:    2         Log-Likelihood:       -160.4531
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+               Coef.  Std.Err.   z    P>|z|  [0.025   0.975] 
+-------------------------------------------------------------
+Intercept     409.685  541.519  0.757 0.449 -651.673 1471.042
+C(Group)[T.B]  -0.225    0.315 -0.714 0.475   -0.843    0.393
+Rok_urodzenia  -0.201    0.270 -0.743 0.458   -0.731    0.329
+Group Var       1.696    0.615                               
+=============================================================
+"
+
+Kierunek_studiów
+"                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                       MixedLM           Dependent Variable:           Sum_Diff 
+No. Observations:            80                Method:                       REML     
+No. Groups:                  40                Scale:                        1.9868   
+Min. group size:             2                 Log-Likelihood:               -157.3823
+Max. group size:             2                 Converged:                    Yes      
+Mean group size:             2.0                                                      
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    7.347    0.326 22.542 0.000  6.708  7.986
+Kierunek_studiów[T.Gospodarka przestrzenna] -0.134    0.776 -0.173 0.863 -1.655  1.387
+Kierunek_studiów[T.MISMaP Geografia]         1.599    0.974  1.641 0.101 -0.311  3.509
+C(Group)[T.B]                               -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var                                    1.611    0.600                           
+======================================================================================
+"
+
+Rok_studiów
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9868   
+Min. group size:   2       Log-Likelihood:     -160.2661
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.041    0.601 11.707 0.000  5.862  8.219
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Rok_studiów    0.248    0.315  0.788 0.430 -0.369  0.865
+Group Var      1.691    0.614                           
+========================================================
+"
+
+Specjalność
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 1.9868   
+Min. group size:       2          Log-Likelihood:        -157.2568
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                7.113    0.567 12.537 0.000  6.001  8.224
+Specjalność[T.GEOINF ]   0.194    0.667  0.291 0.771 -1.114  1.503
+Specjalność[T.NO_VAL]    0.100    0.912  0.110 0.913 -1.687  1.887
+Specjalność[T.SPOŁ-EKO]  1.187    0.794  1.495 0.135 -0.370  2.745
+C(Group)[T.B]           -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var                1.680    0.620                           
+==================================================================
+"
+
+Wady_wzroku
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9868   
+Min. group size:   2       Log-Likelihood:     -159.5916
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.144    0.437 16.334 0.000  6.287  8.001
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Wady_wzroku    0.510    0.527  0.969 0.332 -0.522  1.543
+Group Var      1.670    0.609                           
+========================================================
+"
+
+Ilość_snu
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Sum_Diff 
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               1.9868   
+Min. group size:   2        Log-Likelihood:      -156.0693
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        7.931    0.519 15.294 0.000  6.914  8.947
+Ilość_snu[T.7]  -0.207    0.736 -0.281 0.779 -1.650  1.236
+Ilość_snu[T.8]  -0.818    0.957 -0.855 0.392 -2.693  1.057
+Ilość_snu[T.8<] -1.485    0.832 -1.786 0.074 -3.115  0.145
+Ilość_snu[T.<6] -0.518    0.716 -0.724 0.469 -1.921  0.885
+C(Group)[T.B]   -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var        1.691    0.627                           
+==========================================================
+"
+
+Samopocz
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                1.9868   
+Min. group size:    2         Log-Likelihood:       -157.6510
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           7.812    0.738 10.584 0.000  6.366  9.259
+Samopocz[T.wysoki] -0.614    0.781 -0.786 0.432 -2.144  0.917
+Samopocz[T.średni]  0.550    0.976  0.563 0.573 -1.364  2.464
+C(Group)[T.B]      -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var           1.607    0.599                           
+=============================================================
+"
+
+Stres
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Sum_Diff 
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               1.9868   
+Min. group size:   2        Log-Likelihood:      -158.4262
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        7.237    0.369 19.615 0.000  6.514  7.961
+Stres[T.wysoki]  0.946    0.702  1.348 0.178 -0.430  2.322
+Stres[T.średni]  0.208    0.639  0.326 0.744 -1.044  1.460
+C(Group)[T.B]   -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var        1.678    0.615                           
+==========================================================
+"
+
+Zmęcz
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Sum_Diff 
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               1.9869   
+Min. group size:   2        Log-Likelihood:      -154.1359
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        6.779    0.376 18.028 0.000  6.042  7.516
+Zmęcz[T.wysoki]  1.875    0.540  3.473 0.001  0.817  2.933
+Zmęcz[T.średni]  0.433    0.571  0.759 0.448 -0.686  1.553
+C(Group)[T.B]   -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var        1.105    0.483                           
+==========================================================
+"
+
+Czyt_map
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                1.9869   
+Min. group size:    2         Log-Likelihood:       -159.6034
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           7.484    0.320 23.369 0.000  6.856  8.112
+Czyt_map[T.średni] -0.271    0.789 -0.344 0.731 -1.817  1.274
+C(Group)[T.B]      -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var           1.727    0.622                           
+=============================================================
+"
+
+Podziel_uwg
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 1.9868   
+Min. group size:     2          Log-Likelihood:        -157.9158
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              7.390    0.558 13.255 0.000  6.297  8.483
+Podziel_uwg[T.wysoki] -0.395    0.661 -0.598 0.550 -1.692  0.901
+Podziel_uwg[T.średni]  0.651    0.686  0.949 0.342 -0.693  1.994
+C(Group)[T.B]         -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var              1.581    0.593                           
+================================================================
+"
+
+Analit_myśl
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 1.9869   
+Min. group size:     2          Log-Likelihood:        -157.8876
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              5.612    1.653  3.395 0.001  2.372  8.853
+Analit_myśl[T.wysoki]  1.875    1.675  1.119 0.263 -1.408  5.158
+Analit_myśl[T.średni]  1.909    1.719  1.111 0.267 -1.460  5.278
+C(Group)[T.B]         -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var              1.715    0.624                           
+================================================================
+"
+
+Spostrzeg
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                1.9868   
+Min. group size:     2         Log-Likelihood:       -157.7934
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            8.613    0.822 10.477 0.000  7.001 10.224
+Spostrzeg[T.wysoki] -1.420    0.869 -1.634 0.102 -3.123  0.283
+Spostrzeg[T.średni] -1.000    0.942 -1.061 0.289 -2.847  0.847
+C(Group)[T.B]       -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var            1.610    0.600                           
+==============================================================
+"
+
+Czyt_ze_zroz
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 1.9869   
+Min. group size:      2          Log-Likelihood:        -159.0130
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               7.224    0.576 12.534 0.000  6.094  8.353
+Czyt_ze_zroz[T.wysoki]  0.369    0.646  0.571 0.568 -0.898  1.636
+Czyt_ze_zroz[T.średni] -0.028    0.877 -0.032 0.975 -1.746  1.690
+C(Group)[T.B]          -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var               1.772    0.637                           
+=================================================================
+"
+
+MAT
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9869   
+Min. group size:   2       Log-Likelihood:     -160.0332
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.529    0.420 17.940 0.000  6.707  8.352
+MAT[T.VAL]    -0.144    0.524 -0.274 0.784 -1.172  0.884
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var      1.730    0.623                           
+========================================================
+"
+
+POL
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9868   
+Min. group size:   2       Log-Likelihood:     -159.2376
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.290    0.331 21.994 0.000  6.640  7.940
+POL[T.VAL]     0.711    0.615  1.157 0.247 -0.493  1.916
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var      1.642    0.603                           
+========================================================
+"
+
+HIST
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Sum_Diff 
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              1.9868   
+Min. group size:   2       Log-Likelihood:     -159.2042
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      7.376    0.315 23.419 0.000  6.759  7.994
+HIST[T.VAL]    0.736    0.862  0.854 0.393 -0.954  2.426
+C(Group)[T.B] -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var      1.684    0.612                           
+========================================================
+"
+
+Typ_uczenia
+"               Mixed Linear Model Regression Results
+====================================================================
+Model:                 MixedLM     Dependent Variable:     Sum_Diff 
+No. Observations:      80          Method:                 REML     
+No. Groups:            40          Scale:                  1.9869   
+Min. group size:       2           Log-Likelihood:         -157.4274
+Max. group size:       2           Converged:              Yes      
+Mean group size:       2.0                                          
+--------------------------------------------------------------------
+                          Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------
+Intercept                  7.212    0.549 13.135 0.000  6.136  8.289
+Typ_uczenia[T.Kinestetyk]  0.150    1.288  0.116 0.907 -2.375  2.675
+Typ_uczenia[T.Słuchowiec]  0.983    0.859  1.145 0.252 -0.700  2.667
+Typ_uczenia[T.Wzrokowiec]  0.150    0.634  0.236 0.813 -1.093  1.393
+C(Group)[T.B]             -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var                  1.773    0.642                           
+====================================================================
+"
+
+Quest1_before
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                1.9869   
+Min. group size:    2         Log-Likelihood:       -159.5639
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           7.488    0.841  8.905 0.000  5.840  9.135
+Quest1_before[T.B] -0.042    0.871 -0.048 0.962 -1.748  1.665
+C(Group)[T.B]      -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var           1.735    0.624                           
+=============================================================
+"
+
+Quest2_before
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 1.9868   
+Min. group size:       2          Log-Likelihood:        -156.6337
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                7.041    0.387 18.211 0.000  6.283  7.799
+Quest2_before[T.tabela]  1.286    0.706  1.821 0.069 -0.098  2.670
+Quest2_before[T.tekst]   0.738    0.999  0.739 0.460 -1.219  2.695
+Quest2_before[T.wykres]  0.571    0.645  0.886 0.375 -0.692  1.835
+C(Group)[T.B]           -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var                1.624    0.607                           
+==================================================================
+"
+
+Quest1_after
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Sum_Diff 
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               1.9869   
+Min. group size:     2        Log-Likelihood:      -159.9485
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+                  Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------
+Intercept          7.522    0.522 14.403 0.000  6.498  8.545
+Quest1_after[T.B] -0.099    0.585 -0.169 0.866 -1.245  1.047
+C(Group)[T.B]     -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var          1.733    0.624                           
+============================================================
+"
+
+Quest2_after
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Sum_Diff 
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 1.9868   
+Min. group size:      2          Log-Likelihood:        -156.1246
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               7.890    0.412 19.149 0.000  7.083  8.698
+Quest2_after[T.tabela] -0.361    0.761 -0.474 0.635 -1.853  1.131
+Quest2_after[T.tekst]  -2.278    1.659 -1.373 0.170 -5.530  0.975
+Quest2_after[T.wykres] -0.878    0.565 -1.554 0.120 -1.985  0.229
+C(Group)[T.B]          -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var               1.615    0.605                           
+=================================================================
+"
+
+is_change_1
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                1.9868   
+Min. group size:     2         Log-Likelihood:       -159.4787
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            7.322    0.333 21.982 0.000  6.669  7.975
+is_change_1[T.True]  0.568    0.619  0.918 0.358 -0.644  1.781
+C(Group)[T.B]       -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var            1.676    0.611                           
+==============================================================
+"
+
+is_change_2
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Sum_Diff 
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                1.9869   
+Min. group size:     2         Log-Likelihood:       -159.9711
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            7.581    0.441 17.184 0.000  6.717  8.446
+is_change_2[T.True] -0.219    0.532 -0.411 0.681 -1.261  0.824
+C(Group)[T.B]       -0.225    0.315 -0.714 0.475 -0.843  0.393
+Group Var            1.723    0.621                           
+==============================================================
+"
+
+Diff_1
+Płeć
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7166   
+Min. group size:   2       Log-Likelihood:     -104.1175
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.601    0.164 15.907 0.000  2.281  2.922
+Płeć[T.M]     -0.355    0.205 -1.738 0.082 -0.756  0.045
+C(Group)[T.B] -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var      0.051    0.156                           
+========================================================
+"
+
+Rok_urodzenia
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Diff_1   
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               0.7167   
+Min. group size:     2        Log-Likelihood:      -105.9947
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+               Coef.  Std.Err.   z    P>|z|  [0.025   0.975]
+------------------------------------------------------------
+Intercept     153.543  218.007  0.704 0.481 -273.743 580.829
+C(Group)[T.B]  -0.550    0.189 -2.905 0.004   -0.921  -0.179
+Rok_urodzenia  -0.075    0.109 -0.693 0.488   -0.289   0.138
+Group Var       0.078    0.166                              
+============================================================
+"
+
+Kierunek_studiów
+"                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                       MixedLM           Dependent Variable:           Diff_1   
+No. Observations:            80                Method:                       REML     
+No. Groups:                  40                Scale:                        0.7167   
+Min. group size:             2                 Log-Likelihood:               -104.9586
+Max. group size:             2                 Converged:                    Yes      
+Mean group size:             2.0                                                      
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    2.478    0.152 16.349 0.000  2.181  2.775
+Kierunek_studiów[T.Gospodarka przestrzenna] -0.203    0.322 -0.631 0.528 -0.834  0.428
+Kierunek_studiów[T.MISMaP Geografia]        -0.036    0.404 -0.090 0.928 -0.829  0.756
+C(Group)[T.B]                               -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var                                    0.090    0.172                           
+======================================================================================
+"
+
+Rok_studiów
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7167   
+Min. group size:   2       Log-Likelihood:     -105.0280
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.149    0.248  8.674 0.000  1.663  2.634
+C(Group)[T.B] -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Rok_studiów    0.183    0.124  1.471 0.141 -0.061  0.426
+Group Var      0.059    0.159                           
+========================================================
+"
+
+Specjalność
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Diff_1   
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 0.7167   
+Min. group size:       2          Log-Likelihood:        -105.4628
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.331    0.244  9.561 0.000  1.853  2.808
+Specjalność[T.GEOINF ]   0.194    0.275  0.707 0.480 -0.345  0.734
+Specjalność[T.NO_VAL]   -0.056    0.376 -0.148 0.882 -0.792  0.681
+Specjalność[T.SPOŁ-EKO]  0.194    0.327  0.594 0.553 -0.447  0.836
+C(Group)[T.B]           -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var                0.096    0.175                           
+==================================================================
+"
+
+Wady_wzroku
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7167   
+Min. group size:   2       Log-Likelihood:     -105.3614
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.369    0.190 12.440 0.000  1.996  2.742
+C(Group)[T.B] -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Wady_wzroku    0.135    0.213  0.635 0.526 -0.283  0.553
+Group Var      0.078    0.166                           
+========================================================
+"
+
+Ilość_snu
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_1   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.7167   
+Min. group size:   2        Log-Likelihood:      -103.7598
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.684    0.217 12.352 0.000  2.258  3.110
+Ilość_snu[T.7]  -0.020    0.292 -0.069 0.945 -0.592  0.551
+Ilość_snu[T.8]  -0.409    0.379 -1.080 0.280 -1.152  0.333
+Ilość_snu[T.8<] -0.492    0.329 -1.496 0.135 -1.138  0.153
+Ilość_snu[T.<6] -0.459    0.283 -1.620 0.105 -1.015  0.096
+C(Group)[T.B]   -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var        0.063    0.164                           
+==========================================================
+"
+
+Samopocz
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_1   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.7167   
+Min. group size:    2         Log-Likelihood:       -105.3345
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.375    0.315  7.546 0.000  1.758  2.992
+Samopocz[T.wysoki]  0.107    0.325  0.329 0.742 -0.530  0.744
+Samopocz[T.średni] -0.017    0.406 -0.041 0.967 -0.813  0.780
+C(Group)[T.B]      -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var           0.092    0.173                           
+=============================================================
+"
+
+Stres
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_1   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.7167   
+Min. group size:   2        Log-Likelihood:      -105.5929
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.442    0.166 14.668 0.000  2.115  2.768
+Stres[T.wysoki]  0.119    0.288  0.413 0.680 -0.446  0.684
+Stres[T.średni] -0.056    0.262 -0.212 0.832 -0.569  0.458
+C(Group)[T.B]   -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var        0.092    0.173                           
+==========================================================
+"
+
+Zmęcz
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_1   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.7167   
+Min. group size:   2        Log-Likelihood:      -104.4662
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.275    0.180 12.667 0.000  1.923  2.627
+Zmęcz[T.wysoki]  0.417    0.241  1.726 0.084 -0.056  0.890
+Zmęcz[T.średni]  0.200    0.255  0.783 0.434 -0.301  0.701
+C(Group)[T.B]   -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var        0.061    0.161                           
+==========================================================
+"
+
+Czyt_map
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_1   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.7167   
+Min. group size:    2         Log-Likelihood:       -102.8987
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.532    0.142 17.838 0.000  2.254  2.810
+Czyt_map[T.średni] -0.657    0.299 -2.196 0.028 -1.244 -0.071
+C(Group)[T.B]      -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var           0.033    0.149                           
+=============================================================
+"
+
+Podziel_uwg
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_1   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.7167   
+Min. group size:     2          Log-Likelihood:        -104.5484
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              2.442    0.236 10.339 0.000  1.979  2.905
+Podziel_uwg[T.wysoki] -0.167    0.268 -0.623 0.533 -0.691  0.358
+Podziel_uwg[T.średni]  0.226    0.277  0.816 0.415 -0.317  0.770
+C(Group)[T.B]         -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var              0.063    0.162                           
+================================================================
+"
+
+Analit_myśl
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_1   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.7167   
+Min. group size:     2          Log-Likelihood:        -103.2188
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              1.275    0.650  1.962 0.050  0.002  2.548
+Analit_myśl[T.wysoki]  1.179    0.654  1.802 0.072 -0.104  2.461
+Analit_myśl[T.średni]  1.273    0.671  1.896 0.058 -0.043  2.589
+C(Group)[T.B]         -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var              0.055    0.158                           
+================================================================
+"
+
+Spostrzeg
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_1   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.7167   
+Min. group size:     2         Log-Likelihood:       -104.1439
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.900    0.337  8.593 0.000  2.239  3.561
+Spostrzeg[T.wysoki] -0.565    0.349 -1.619 0.105 -1.249  0.119
+Spostrzeg[T.średni] -0.352    0.378 -0.931 0.352 -1.094  0.389
+C(Group)[T.B]       -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var            0.061    0.161                           
+==============================================================
+"
+
+Czyt_ze_zroz
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_1   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.7167   
+Min. group size:      2          Log-Likelihood:        -105.1063
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.442    0.240 10.155 0.000  1.970  2.913
+Czyt_ze_zroz[T.wysoki]  0.073    0.258  0.284 0.776 -0.432  0.579
+Czyt_ze_zroz[T.średni] -0.250    0.349 -0.715 0.474 -0.935  0.435
+C(Group)[T.B]          -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var               0.081    0.169                           
+=================================================================
+"
+
+MAT
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7167   
+Min. group size:   2       Log-Likelihood:     -105.4944
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.497    0.183 13.669 0.000  2.139  2.855
+MAT[T.VAL]    -0.086    0.211 -0.407 0.684 -0.499  0.327
+C(Group)[T.B] -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var      0.081    0.167                           
+========================================================
+"
+
+POL
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7166   
+Min. group size:   2       Log-Likelihood:     -105.3484
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.469    0.152 16.221 0.000  2.170  2.767
+POL[T.VAL]    -0.082    0.251 -0.328 0.743 -0.575  0.410
+C(Group)[T.B] -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var      0.082    0.168                           
+========================================================
+"
+
+HIST
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_1   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.7166   
+Min. group size:   2       Log-Likelihood:     -105.0588
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.456    0.146 16.860 0.000  2.170  2.741
+HIST[T.VAL]   -0.056    0.350 -0.159 0.874 -0.742  0.631
+C(Group)[T.B] -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var      0.083    0.168                           
+========================================================
+"
+
+Typ_uczenia
+"               Mixed Linear Model Regression Results
+====================================================================
+Model:                 MixedLM     Dependent Variable:     Diff_1   
+No. Observations:      80          Method:                 REML     
+No. Groups:            40          Scale:                  0.7167   
+Min. group size:       2           Log-Likelihood:         -104.7463
+Max. group size:       2           Converged:              Yes      
+Mean group size:       2.0                                          
+--------------------------------------------------------------------
+                          Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------
+Intercept                  2.275    0.232  9.818 0.000  1.821  2.729
+Typ_uczenia[T.Kinestetyk]  0.250    0.518  0.483 0.629 -0.765  1.265
+Typ_uczenia[T.Słuchowiec]  0.417    0.345  1.206 0.228 -0.260  1.094
+Typ_uczenia[T.Wzrokowiec]  0.182    0.255  0.713 0.476 -0.318  0.682
+C(Group)[T.B]             -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var                  0.089    0.173                           
+====================================================================
+"
+
+Quest1_before
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_1   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.7167   
+Min. group size:    2         Log-Likelihood:       -104.0237
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.900    0.337  8.612 0.000  2.240  3.560
+Quest1_before[T.B] -0.500    0.341 -1.468 0.142 -1.168  0.168
+C(Group)[T.B]      -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var           0.059    0.159                           
+=============================================================
+"
+
+Quest2_before
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Diff_1   
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 0.7167   
+Min. group size:       2          Log-Likelihood:        -101.7519
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.275    0.164 13.898 0.000  1.954  2.596
+Quest2_before[T.tabela]  0.786    0.267  2.942 0.003  0.262  1.309
+Quest2_before[T.tekst]   0.167    0.378  0.441 0.659 -0.574  0.907
+Quest2_before[T.wykres]  0.111    0.244  0.456 0.649 -0.367  0.589
+C(Group)[T.B]           -0.550    0.189 -2.905 0.004 -0.921 -0.179
+Group Var                0.016    0.145                           
+==================================================================
+"
+
+Quest1_after
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Diff_1   
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               0.7166   
+Min. group size:     2        Log-Likelihood:      -104.0764
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+                  Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------
+Intercept          2.730    0.215 12.692 0.000  2.308  3.151
+Quest1_after[T.B] -0.386    0.227 -1.700 0.089 -0.830  0.059
+C(Group)[T.B]     -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var          0.052    0.156                           
+============================================================
+"
+
+Quest2_after
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_1   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.7167   
+Min. group size:      2          Log-Likelihood:        -102.9393
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.608    0.178 14.639 0.000  2.259  2.958
+Quest2_after[T.tabela] -0.167    0.302 -0.552 0.581 -0.758  0.425
+Quest2_after[T.tekst]  -1.333    0.658 -2.026 0.043 -2.623 -0.044
+Quest2_after[T.wykres] -0.267    0.224 -1.191 0.234 -0.706  0.172
+C(Group)[T.B]          -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var               0.052    0.158                           
+=================================================================
+"
+
+is_change_1
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_1   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.7166   
+Min. group size:     2         Log-Likelihood:       -102.7197
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.323    0.146 15.911 0.000  2.037  2.610
+is_change_1[T.True]  0.563    0.234  2.400 0.016  0.103  1.022
+C(Group)[T.B]       -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var            0.025    0.146                           
+==============================================================
+"
+
+is_change_2
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_1   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.7166   
+Min. group size:     2         Log-Likelihood:       -105.5039
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.494    0.191 13.059 0.000  2.119  2.868
+is_change_2[T.True] -0.073    0.214 -0.341 0.733 -0.493  0.347
+C(Group)[T.B]       -0.550    0.189 -2.906 0.004 -0.921 -0.179
+Group Var            0.082    0.168                           
+==============================================================
+"
+
+Diff_2
+Płeć
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -117.5183
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.557    0.201 12.747 0.000  2.163  2.950
+Płeć[T.M]     -0.368    0.262 -1.404 0.160 -0.883  0.146
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var      0.235    0.232                           
+========================================================
+"
+
+Rok_urodzenia
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Diff_2   
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               0.8769   
+Min. group size:     2        Log-Likelihood:      -118.9178
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+               Coef.  Std.Err.   z    P>|z|  [0.025   0.975]
+------------------------------------------------------------
+Intercept     187.523  276.179  0.679 0.497 -353.778 728.824
+C(Group)[T.B]  -0.200    0.209 -0.955 0.340   -0.610   0.210
+Rok_urodzenia  -0.092    0.138 -0.670 0.503   -0.363   0.178
+Group Var       0.261    0.241                              
+============================================================
+"
+
+Kierunek_studiów
+"                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                       MixedLM           Dependent Variable:           Diff_2   
+No. Observations:            80                Method:                       REML     
+No. Groups:                  40                Scale:                        0.8769   
+Min. group size:             2                 Log-Likelihood:               -117.0981
+Max. group size:             2                 Converged:                    Yes      
+Mean group size:             2.0                                                      
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    2.334    0.181 12.889 0.000  1.979  2.689
+Kierunek_studiów[T.Gospodarka przestrzenna]  0.166    0.402  0.412 0.680 -0.622  0.954
+Kierunek_studiów[T.MISMaP Geografia]         0.599    0.505  1.187 0.235 -0.390  1.588
+C(Group)[T.B]                               -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var                                    0.260    0.242                           
+======================================================================================
+"
+
+Rok_studiów
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -118.6084
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.631    0.313  8.405 0.000  2.018  3.245
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Rok_studiów   -0.140    0.160 -0.876 0.381 -0.454  0.173
+Group Var      0.255    0.239                           
+========================================================
+"
+
+Specjalność
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Diff_2   
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 0.8769   
+Min. group size:       2          Log-Likelihood:        -117.1659
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.267    0.298  7.613 0.000  1.683  2.850
+Specjalność[T.GEOINF ]  -0.000    0.341 -0.000 1.000 -0.669  0.669
+Specjalność[T.NO_VAL]    0.233    0.466  0.500 0.617 -0.681  1.147
+Specjalność[T.SPOŁ-EKO]  0.521    0.406  1.282 0.200 -0.275  1.317
+C(Group)[T.B]           -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var                0.261    0.244                           
+==================================================================
+"
+
+Wady_wzroku
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -118.0764
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.256    0.233  9.683 0.000  1.800  2.713
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Wady_wzroku    0.240    0.269  0.891 0.373 -0.287  0.766
+Group Var      0.255    0.239                           
+========================================================
+"
+
+Ilość_snu
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_2   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.8769   
+Min. group size:   2        Log-Likelihood:      -117.2186
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.691    0.277  9.704 0.000  2.147  3.234
+Ilość_snu[T.7]  -0.369    0.383 -0.963 0.335 -1.119  0.382
+Ilość_snu[T.8]  -0.466    0.497 -0.937 0.349 -1.441  0.509
+Ilość_snu[T.8<] -0.258    0.432 -0.596 0.551 -1.105  0.590
+Ilość_snu[T.<6] -0.491    0.372 -1.319 0.187 -1.220  0.238
+C(Group)[T.B]   -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var        0.287    0.255                           
+==========================================================
+"
+
+Samopocz
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_2   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.8769   
+Min. group size:    2         Log-Likelihood:       -109.7172
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           3.000    0.321  9.336 0.000  2.370  3.630
+Samopocz[T.wysoki] -0.900    0.329 -2.736 0.006 -1.545 -0.255
+Samopocz[T.średni]  0.350    0.411  0.851 0.395 -0.456  1.156
+C(Group)[T.B]      -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var           0.023    0.160                           
+=============================================================
+"
+
+Stres
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_2   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.8769   
+Min. group size:   2        Log-Likelihood:      -113.4377
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.163    0.185 11.706 0.000  1.800  2.525
+Stres[T.wysoki]  1.080    0.320  3.373 0.001  0.453  1.708
+Stres[T.średni]  0.215    0.291  0.739 0.460 -0.356  0.786
+C(Group)[T.B]   -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var        0.117    0.193                           
+==========================================================
+"
+
+Zmęcz
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_2   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.8769   
+Min. group size:   2        Log-Likelihood:      -116.0236
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.211    0.215 10.294 0.000  1.790  2.632
+Zmęcz[T.wysoki]  0.639    0.297  2.154 0.031  0.058  1.220
+Zmęcz[T.średni] -0.011    0.314 -0.035 0.972 -0.626  0.604
+C(Group)[T.B]   -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var        0.195    0.219                           
+==========================================================
+"
+
+Czyt_map
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_2   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.8769   
+Min. group size:    2         Log-Likelihood:       -118.0363
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.386    0.176 13.519 0.000  2.040  2.732
+Czyt_map[T.średni]  0.114    0.402  0.284 0.776 -0.673  0.902
+C(Group)[T.B]      -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var           0.268    0.243                           
+=============================================================
+"
+
+Podziel_uwg
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_2   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.8769   
+Min. group size:     2          Log-Likelihood:        -116.3189
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              2.211    0.287  7.700 0.000  1.648  2.774
+Podziel_uwg[T.wysoki] -0.023    0.331 -0.069 0.945 -0.671  0.625
+Podziel_uwg[T.średni]  0.567    0.343  1.656 0.098 -0.104  1.239
+C(Group)[T.B]         -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var              0.205    0.223                           
+================================================================
+"
+
+Analit_myśl
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_2   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.8769   
+Min. group size:     2          Log-Likelihood:        -117.5300
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              2.100    0.857  2.450 0.014  0.420  3.780
+Analit_myśl[T.wysoki]  0.321    0.866  0.371 0.711 -1.376  2.019
+Analit_myśl[T.średni]  0.273    0.889  0.307 0.759 -1.469  2.015
+C(Group)[T.B]         -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var              0.286    0.251                           
+================================================================
+"
+
+Spostrzeg
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_2   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.8769   
+Min. group size:     2         Log-Likelihood:       -117.8410
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.100    0.435  4.833 0.000  1.248  2.952
+Spostrzeg[T.wysoki]  0.380    0.454  0.837 0.403 -0.510  1.270
+Spostrzeg[T.średni]  0.227    0.492  0.461 0.644 -0.738  1.192
+C(Group)[T.B]       -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var            0.273    0.247                           
+==============================================================
+"
+
+Czyt_ze_zroz
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_2   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.8769   
+Min. group size:      2          Log-Likelihood:        -117.9449
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.322    0.300  7.740 0.000  1.734  2.910
+Czyt_ze_zroz[T.wysoki]  0.038    0.328  0.115 0.908 -0.605  0.680
+Czyt_ze_zroz[T.średni]  0.361    0.445  0.812 0.417 -0.510  1.232
+C(Group)[T.B]          -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var               0.273    0.247                           
+=================================================================
+"
+
+MAT
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -118.4593
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.433    0.224 10.857 0.000  1.994  2.873
+MAT[T.VAL]    -0.061    0.267 -0.227 0.821 -0.584  0.463
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var      0.268    0.243                           
+========================================================
+"
+
+POL
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -118.1380
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.358    0.183 12.866 0.000  1.999  2.717
+POL[T.VAL]     0.186    0.317  0.588 0.557 -0.435  0.808
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var      0.263    0.241                           
+========================================================
+"
+
+HIST
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_2   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.8769   
+Min. group size:   2       Log-Likelihood:     -117.6945
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.433    0.174 13.972 0.000  2.092  2.775
+HIST[T.VAL]   -0.333    0.440 -0.757 0.449 -1.196  0.529
+C(Group)[T.B] -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var      0.259    0.240                           
+========================================================
+"
+
+Typ_uczenia
+"               Mixed Linear Model Regression Results
+====================================================================
+Model:                 MixedLM     Dependent Variable:     Diff_2   
+No. Observations:      80          Method:                 REML     
+No. Groups:            40          Scale:                  0.8769   
+Min. group size:       2           Log-Likelihood:         -116.7035
+Max. group size:       2           Converged:              Yes      
+Mean group size:       2.0                                          
+--------------------------------------------------------------------
+                          Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------
+Intercept                  2.200    0.284  7.738 0.000  1.643  2.757
+Typ_uczenia[T.Kinestetyk]  0.400    0.647  0.618 0.537 -0.869  1.669
+Typ_uczenia[T.Słuchowiec]  0.650    0.432  1.506 0.132 -0.196  1.496
+Typ_uczenia[T.Wzrokowiec]  0.150    0.319  0.471 0.638 -0.475  0.775
+C(Group)[T.B]             -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var                  0.260    0.244                           
+====================================================================
+"
+
+Quest1_before
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_2   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.8769   
+Min. group size:    2         Log-Likelihood:       -117.4035
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           1.975    0.427  4.621 0.000  1.137  2.813
+Quest1_before[T.B]  0.472    0.437  1.081 0.280 -0.384  1.328
+C(Group)[T.B]      -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var           0.248    0.236                           
+=============================================================
+"
+
+Quest2_before
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Diff_2   
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 0.8769   
+Min. group size:       2          Log-Likelihood:        -117.8054
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.481    0.214 11.576 0.000  2.061  2.901
+Quest2_before[T.tabela] -0.095    0.374 -0.255 0.799 -0.828  0.638
+Quest2_before[T.tekst]  -0.381    0.529 -0.720 0.471 -1.418  0.656
+Quest2_before[T.wykres] -0.159    0.341 -0.465 0.642 -0.828  0.510
+C(Group)[T.B]           -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var                0.296    0.256                           
+==================================================================
+"
+
+Quest1_after
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Diff_2   
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               0.8769   
+Min. group size:     2        Log-Likelihood:      -117.7200
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+                  Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------
+Intercept          2.645    0.270  9.783 0.000  2.115  3.175
+Quest1_after[T.B] -0.339    0.293 -1.156 0.248 -0.912  0.235
+C(Group)[T.B]     -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var          0.245    0.235                           
+============================================================
+"
+
+Quest2_after
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_2   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.8769   
+Min. group size:      2          Log-Likelihood:        -116.1425
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.656    0.222 11.985 0.000  2.221  3.090
+Quest2_after[T.tabela] -0.389    0.391 -0.996 0.319 -1.154  0.377
+Quest2_after[T.tekst]  -0.556    0.851 -0.653 0.514 -2.224  1.113
+Quest2_after[T.wykres] -0.489    0.290 -1.688 0.091 -1.057  0.079
+C(Group)[T.B]          -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var               0.248    0.240                           
+=================================================================
+"
+
+is_change_1
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_2   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.8769   
+Min. group size:     2         Log-Likelihood:       -117.4989
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.310    0.181 12.745 0.000  1.954  2.665
+is_change_1[T.True]  0.401    0.312  1.287 0.198 -0.210  1.013
+C(Group)[T.B]       -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var            0.240    0.234                           
+==============================================================
+"
+
+is_change_2
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_2   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.8769   
+Min. group size:     2         Log-Likelihood:       -118.3634
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.475    0.234 10.557 0.000  2.016  2.934
+is_change_2[T.True] -0.125    0.271 -0.462 0.644 -0.656  0.406
+C(Group)[T.B]       -0.200    0.209 -0.955 0.340 -0.610  0.210
+Group Var            0.265    0.242                           
+==============================================================
+"
+
+Diff_3
+Płeć
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_3   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.4356   
+Min. group size:   2       Log-Likelihood:     -112.6037
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.607    0.228 11.458 0.000  2.161  3.053
+Płeć[T.M]     -0.017    0.330 -0.050 0.960 -0.664  0.630
+C(Group)[T.B]  0.525    0.148  3.557 0.000  0.236  0.814
+Group Var      0.848    0.520                           
+========================================================
+"
+
+Rok_urodzenia
+"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM  Dependent Variable:  Diff_3   
+No. Observations:   80       Method:              REML     
+No. Groups:         40       Scale:               0.4356   
+Min. group size:    2        Log-Likelihood:      -113.2487
+Max. group size:    2        Converged:           Yes      
+Mean group size:    2.0                                    
+-----------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z|  [0.025   0.975]
+-----------------------------------------------------------
+Intercept     68.618  340.677  0.201 0.840 -599.097 736.333
+C(Group)[T.B]  0.525    0.148  3.557 0.000    0.236   0.814
+Rok_urodzenia -0.033    0.170 -0.194 0.846   -0.366   0.300
+Group Var      0.847    0.520                              
+===========================================================
+"
+
+Kierunek_studiów
+"                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                       MixedLM           Dependent Variable:           Diff_3   
+No. Observations:            80                Method:                       REML     
+No. Groups:                  40                Scale:                        0.4356   
+Min. group size:             2                 Log-Likelihood:               -110.2780
+Max. group size:             2                 Converged:                    Yes      
+Mean group size:             2.0                                                      
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    2.534    0.192 13.170 0.000  2.157  2.912
+Kierunek_studiów[T.Gospodarka przestrzenna] -0.097    0.483 -0.200 0.841 -1.044  0.851
+Kierunek_studiów[T.MISMaP Geografia]         1.036    0.607  1.707 0.088 -0.153  2.226
+C(Group)[T.B]                                0.525    0.148  3.557 0.000  0.236  0.814
+Group Var                                    0.793    0.497                           
+======================================================================================
+"
+
+Rok_studiów
+"         Mixed Linear Model Regression Results
+=======================================================
+Model:            MixedLM Dependent Variable: Diff_3   
+No. Observations: 80      Method:             REML     
+No. Groups:       40      Scale:              0.4356   
+Min. group size:  2       Log-Likelihood:     -112.5689
+Max. group size:  2       Converged:          Yes      
+Mean group size:  2.0                                  
+-------------------------------------------------------
+               Coef. Std.Err.   z   P>|z| [0.025 0.975]
+-------------------------------------------------------
+Intercept      2.261    0.368 6.144 0.000  1.539  2.982
+C(Group)[T.B]  0.525    0.148 3.557 0.000  0.236  0.814
+Rok_studiów    0.206    0.195 1.052 0.293 -0.177  0.589
+Group Var      0.818    0.506                          
+=======================================================
+"
+
+Specjalność
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                 MixedLM    Dependent Variable:    Diff_3   
+No. Observations:      80         Method:                REML     
+No. Groups:            40         Scale:                 0.4356   
+Min. group size:       2          Log-Likelihood:        -111.3887
+Max. group size:       2          Converged:             Yes      
+Mean group size:       2.0                                        
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.515    0.355  7.094 0.000  1.820  3.210
+Specjalność[T.GEOINF ]  -0.000    0.425 -0.000 1.000 -0.832  0.832
+Specjalność[T.NO_VAL]   -0.078    0.580 -0.134 0.893 -1.215  1.060
+Specjalność[T.SPOŁ-EKO]  0.472    0.506  0.934 0.350 -0.519  1.463
+C(Group)[T.B]            0.525    0.148  3.557 0.000  0.236  0.814
+Group Var                0.865    0.536                           
+==================================================================
+"
+
+Wady_wzroku
+"         Mixed Linear Model Regression Results
+=======================================================
+Model:            MixedLM Dependent Variable: Diff_3   
+No. Observations: 80      Method:             REML     
+No. Groups:       40      Scale:              0.4356   
+Min. group size:  2       Log-Likelihood:     -112.5132
+Max. group size:  2       Converged:          Yes      
+Mean group size:  2.0                                  
+-------------------------------------------------------
+               Coef. Std.Err.   z   P>|z| [0.025 0.975]
+-------------------------------------------------------
+Intercept      2.519    0.268 9.403 0.000  1.994  3.044
+C(Group)[T.B]  0.525    0.148 3.557 0.000  0.236  0.814
+Wady_wzroku    0.135    0.332 0.407 0.684 -0.516  0.787
+Group Var      0.843    0.518                          
+=======================================================
+"
+
+Ilość_snu
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_3   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.4356   
+Min. group size:   2        Log-Likelihood:      -109.2724
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.556    0.311  8.216 0.000  1.946  3.165
+Ilość_snu[T.7]   0.182    0.450  0.404 0.686 -0.701  1.065
+Ilość_snu[T.8]   0.057    0.585  0.097 0.923 -1.090  1.204
+Ilość_snu[T.8<] -0.735    0.509 -1.445 0.149 -1.732  0.262
+Ilość_snu[T.<6]  0.432    0.438  0.986 0.324 -0.426  1.290
+C(Group)[T.B]    0.525    0.148  3.557 0.000  0.236  0.814
+Group Var        0.787    0.501                           
+==========================================================
+"
+
+Samopocz
+"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM  Dependent Variable:  Diff_3   
+No. Observations:   80       Method:              REML     
+No. Groups:         40       Scale:               0.4356   
+Min. group size:    2        Log-Likelihood:      -111.9753
+Max. group size:    2        Converged:           Yes      
+Mean group size:    2.0                                    
+-----------------------------------------------------------
+                   Coef. Std.Err.   z   P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept          2.438    0.473 5.156 0.000  1.511  3.364
+Samopocz[T.wysoki] 0.179    0.506 0.355 0.723 -0.812  1.170
+Samopocz[T.średni] 0.217    0.632 0.343 0.732 -1.022  1.456
+C(Group)[T.B]      0.525    0.148 3.557 0.000  0.236  0.814
+Group Var          0.872    0.536                          
+===========================================================
+"
+
+Stres
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_3   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.4356   
+Min. group size:   2        Log-Likelihood:      -112.1287
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.633    0.225 11.710 0.000  2.193  3.074
+Stres[T.wysoki] -0.253    0.447 -0.566 0.571 -1.129  0.623
+Stres[T.średni]  0.049    0.407  0.120 0.905 -0.749  0.846
+C(Group)[T.B]    0.525    0.148  3.557 0.000  0.236  0.814
+Group Var        0.865    0.533                           
+==========================================================
+"
+
+Zmęcz
+"         Mixed Linear Model Regression Results
+========================================================
+Model:             MixedLM Dependent Variable: Diff_3   
+No. Observations:  80      Method:             REML     
+No. Groups:        40      Scale:              0.4356   
+Min. group size:   2       Log-Likelihood:     -110.1230
+Max. group size:   2       Converged:          Yes      
+Mean group size:   2.0                                  
+--------------------------------------------------------
+                Coef. Std.Err.   z   P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept       2.293    0.243 9.448 0.000  1.817  2.769
+Zmęcz[T.wysoki] 0.819    0.366 2.241 0.025  0.103  1.536
+Zmęcz[T.średni] 0.244    0.387 0.632 0.528 -0.514  1.003
+C(Group)[T.B]   0.525    0.148 3.557 0.000  0.236  0.814
+Group Var       0.745    0.473                          
+========================================================
+"
+
+Czyt_map
+"           Mixed Linear Model Regression Results
+============================================================
+Model:               MixedLM  Dependent Variable:  Diff_3   
+No. Observations:    80       Method:              REML     
+No. Groups:          40       Scale:               0.4356   
+Min. group size:     2        Log-Likelihood:      -112.0512
+Max. group size:     2        Converged:           Yes      
+Mean group size:     2.0                                    
+------------------------------------------------------------
+                   Coef. Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------
+Intercept          2.566    0.189 13.591 0.000  2.196  2.936
+Czyt_map[T.średni] 0.271    0.492  0.552 0.581 -0.692  1.235
+C(Group)[T.B]      0.525    0.148  3.557 0.000  0.236  0.814
+Group Var          0.839    0.516                           
+============================================================
+"
+
+Podziel_uwg
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_3   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.4356   
+Min. group size:     2          Log-Likelihood:        -112.3834
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              2.737    0.355  7.703 0.000  2.041  3.434
+Podziel_uwg[T.wysoki] -0.206    0.430 -0.479 0.632 -1.049  0.637
+Podziel_uwg[T.średni] -0.143    0.446 -0.321 0.749 -1.016  0.730
+C(Group)[T.B]          0.525    0.148  3.557 0.000  0.236  0.814
+Group Var              0.870    0.535                           
+================================================================
+"
+
+Analit_myśl
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_3   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.4356   
+Min. group size:     2         Log-Likelihood:       -111.4662
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                      Coef. Std.Err.   z   P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept             2.237    1.047 2.137 0.033  0.185  4.290
+Analit_myśl[T.wysoki] 0.375    1.063 0.353 0.724 -1.708  2.458
+Analit_myśl[T.średni] 0.364    1.091 0.333 0.739 -1.774  2.502
+C(Group)[T.B]         0.525    0.148 3.557 0.000  0.236  0.814
+Group Var             0.873    0.536                          
+==============================================================
+"
+
+Spostrzeg
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_3   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.4356   
+Min. group size:     2         Log-Likelihood:       -109.4397
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            3.613    0.492  7.350 0.000  2.649  4.576
+Spostrzeg[T.wysoki] -1.235    0.523 -2.360 0.018 -2.261 -0.209
+Spostrzeg[T.średni] -0.875    0.567 -1.542 0.123 -1.987  0.237
+C(Group)[T.B]        0.525    0.148  3.557 0.000  0.236  0.814
+Group Var            0.727    0.464                           
+==============================================================
+"
+
+Czyt_ze_zroz
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_3   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.4356   
+Min. group size:      2          Log-Likelihood:        -111.8093
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.460    0.352  6.983 0.000  1.769  3.150
+Czyt_ze_zroz[T.wysoki]  0.258    0.402  0.642 0.521 -0.529  1.045
+Czyt_ze_zroz[T.średni] -0.139    0.545 -0.255 0.799 -1.206  0.928
+C(Group)[T.B]           0.525    0.148  3.557 0.000  0.236  0.814
+Group Var               0.850    0.525                           
+=================================================================
+"
+
+MAT
+"         Mixed Linear Model Regression Results
+=======================================================
+Model:            MixedLM Dependent Variable: Diff_3   
+No. Observations: 80      Method:             REML     
+No. Groups:       40      Scale:              0.4356   
+Min. group size:  2       Log-Likelihood:     -112.6113
+Max. group size:  2       Converged:          Yes      
+Mean group size:  2.0                                  
+-------------------------------------------------------
+              Coef. Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------
+Intercept     2.599    0.254 10.221 0.000  2.100  3.097
+MAT[T.VAL]    0.003    0.328  0.008 0.994 -0.641  0.646
+C(Group)[T.B] 0.525    0.148  3.557 0.000  0.236  0.814
+Group Var     0.848    0.520                           
+=======================================================
+"
+
+POL
+"         Mixed Linear Model Regression Results
+=======================================================
+Model:            MixedLM Dependent Variable: Diff_3   
+No. Observations: 80      Method:             REML     
+No. Groups:       40      Scale:              0.4356   
+Min. group size:  2       Log-Likelihood:     -111.1882
+Max. group size:  2       Converged:          Yes      
+Mean group size:  2.0                                  
+-------------------------------------------------------
+              Coef. Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------
+Intercept     2.463    0.194 12.698 0.000  2.083  2.844
+POL[T.VAL]    0.608    0.378  1.606 0.108 -0.134  1.349
+C(Group)[T.B] 0.525    0.148  3.557 0.000  0.236  0.814
+Group Var     0.780    0.487                           
+=======================================================
+"
+
+HIST
+"         Mixed Linear Model Regression Results
+=======================================================
+Model:            MixedLM Dependent Variable: Diff_3   
+No. Observations: 80      Method:             REML     
+No. Groups:       40      Scale:              0.4356   
+Min. group size:  2       Log-Likelihood:     -109.8376
+Max. group size:  2       Converged:          Yes      
+Mean group size:  2.0                                  
+-------------------------------------------------------
+              Coef. Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------
+Intercept     2.487    0.178 13.968 0.000  2.138  2.837
+HIST[T.VAL]   1.125    0.513  2.195 0.028  0.120  2.130
+C(Group)[T.B] 0.525    0.148  3.557 0.000  0.236  0.814
+Group Var     0.728    0.462                           
+=======================================================
+"
+
+Typ_uczenia
+"               Mixed Linear Model Regression Results
+====================================================================
+Model:                 MixedLM     Dependent Variable:     Diff_3   
+No. Observations:      80          Method:                 REML     
+No. Groups:            40          Scale:                  0.4356   
+Min. group size:       2           Log-Likelihood:         -111.4023
+Max. group size:       2           Converged:              Yes      
+Mean group size:       2.0                                          
+--------------------------------------------------------------------
+                          Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------
+Intercept                  2.737    0.341  8.020 0.000  2.069  3.406
+Typ_uczenia[T.Kinestetyk] -0.500    0.816 -0.613 0.540 -2.100  1.100
+Typ_uczenia[T.Słuchowiec] -0.083    0.544 -0.153 0.878 -1.150  0.983
+Typ_uczenia[T.Wzrokowiec] -0.182    0.402 -0.452 0.651 -0.970  0.606
+C(Group)[T.B]              0.525    0.148  3.557 0.000  0.236  0.814
+Group Var                  0.893    0.550                           
+====================================================================
+"
+
+Quest1_before
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:              MixedLM   Dependent Variable:   Diff_3   
+No. Observations:   80        Method:               REML     
+No. Groups:         40        Scale:                0.4356   
+Min. group size:    2         Log-Likelihood:       -112.1052
+Max. group size:    2         Converged:            Yes      
+Mean group size:    2.0                                      
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.613    0.521  5.011 0.000  1.591  3.634
+Quest1_before[T.B] -0.014    0.544 -0.026 0.980 -1.080  1.052
+C(Group)[T.B]       0.525    0.148  3.557 0.000  0.236  0.814
+Group Var           0.848    0.520                           
+=============================================================
+"
+
+Quest2_before
+"             Mixed Linear Model Regression Results
+================================================================
+Model:               MixedLM    Dependent Variable:    Diff_3   
+No. Observations:    80         Method:                REML     
+No. Groups:          40         Scale:                 0.4356   
+Min. group size:     2          Log-Likelihood:        -109.6227
+Max. group size:     2          Converged:             Yes      
+Mean group size:     2.0                                        
+----------------------------------------------------------------
+                        Coef. Std.Err.   z   P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept               2.285    0.230 9.944 0.000  1.835  2.736
+Quest2_before[T.tabela] 0.595    0.435 1.367 0.171 -0.258  1.448
+Quest2_before[T.tekst]  0.952    0.616 1.547 0.122 -0.254  2.159
+Quest2_before[T.wykres] 0.619    0.397 1.558 0.119 -0.160  1.398
+C(Group)[T.B]           0.525    0.148 3.557 0.000  0.236  0.814
+Group Var               0.777    0.493                          
+================================================================
+"
+
+Quest1_after
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM  Dependent Variable:  Diff_3   
+No. Observations:  80       Method:              REML     
+No. Groups:        40       Scale:               0.4356   
+Min. group size:   2        Log-Likelihood:      -110.9802
+Max. group size:   2        Converged:           Yes      
+Mean group size:   2.0                                    
+----------------------------------------------------------
+                  Coef. Std.Err.   z   P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept         2.147    0.308 6.970 0.000  1.543  2.750
+Quest1_after[T.B] 0.625    0.351 1.781 0.075 -0.063  1.314
+C(Group)[T.B]     0.525    0.148 3.557 0.000  0.236  0.814
+Group Var         0.766    0.480                          
+==========================================================
+"
+
+Quest2_after
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                MixedLM    Dependent Variable:    Diff_3   
+No. Observations:     80         Method:                REML     
+No. Groups:           40         Scale:                 0.4356   
+Min. group size:      2          Log-Likelihood:        -111.1304
+Max. group size:      2          Converged:             Yes      
+Mean group size:      2.0                                        
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.626    0.259 10.143 0.000  2.119  3.134
+Quest2_after[T.tabela]  0.194    0.496  0.392 0.695 -0.778  1.167
+Quest2_after[T.tekst]  -0.389    1.082 -0.359 0.719 -2.509  1.732
+Quest2_after[T.wykres] -0.122    0.368 -0.332 0.740 -0.844  0.599
+C(Group)[T.B]           0.525    0.148  3.557 0.000  0.236  0.814
+Group Var               0.891    0.549                           
+=================================================================
+"
+
+is_change_1
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_3   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.4356   
+Min. group size:     2         Log-Likelihood:       -111.9158
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.689    0.197 13.636 0.000  2.303  3.076
+is_change_1[T.True] -0.396    0.386 -1.027 0.304 -1.152  0.360
+C(Group)[T.B]        0.525    0.148  3.557 0.000  0.236  0.814
+Group Var            0.819    0.506                           
+==============================================================
+"
+
+is_change_2
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:               MixedLM   Dependent Variable:   Diff_3   
+No. Observations:    80        Method:               REML     
+No. Groups:          40        Scale:                0.4356   
+Min. group size:     2         Log-Likelihood:       -112.5940
+Max. group size:     2         Converged:            Yes      
+Mean group size:     2.0                                      
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.612    0.268  9.734 0.000  2.086  3.139
+is_change_2[T.True] -0.021    0.333 -0.063 0.950 -0.674  0.632
+C(Group)[T.B]        0.525    0.148  3.557 0.000  0.236  0.814
+Group Var            0.848    0.520                           
+==============================================================
+"
+
+Avg_Diff
+Płeć
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -74.4632
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.588    0.124 20.951 0.000  2.346  2.830
+Płeć[T.M]     -0.247    0.172 -1.439 0.150 -0.583  0.089
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var      0.177    0.197                           
+========================================================
+"
+
+Rok_urodzenia
+"           Mixed Linear Model Regression Results
+============================================================
+Model:              MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:   80        Method:               REML    
+No. Groups:         40        Scale:                0.2208  
+Min. group size:    2         Log-Likelihood:       -75.8600
+Max. group size:    2         Converged:            Yes     
+Mean group size:    2.0                                     
+------------------------------------------------------------
+               Coef.  Std.Err.   z    P>|z|  [0.025   0.975]
+------------------------------------------------------------
+Intercept     136.562  180.506  0.757 0.449 -217.224 490.347
+C(Group)[T.B]  -0.075    0.105 -0.714 0.475   -0.281   0.131
+Rok_urodzenia  -0.067    0.090 -0.743 0.458   -0.244   0.110
+Group Var       0.188    0.205                              
+============================================================
+"
+
+Kierunek_studiów
+"                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                        MixedLM           Dependent Variable:           Avg_Diff
+No. Observations:             80                Method:                       REML    
+No. Groups:                   40                Scale:                        0.2208  
+Min. group size:              2                 Log-Likelihood:               -73.8878
+Max. group size:              2                 Converged:                    Yes     
+Mean group size:              2.0                                                     
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    2.449    0.109 22.542 0.000  2.236  2.662
+Kierunek_studiów[T.Gospodarka przestrzenna] -0.045    0.259 -0.173 0.863 -0.552  0.462
+Kierunek_studiów[T.MISMaP Geografia]         0.533    0.325  1.641 0.101 -0.104  1.170
+C(Group)[T.B]                               -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var                                    0.179    0.200                           
+======================================================================================
+"
+
+Rok_studiów
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -75.6729
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.347    0.200 11.707 0.000  1.954  2.740
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Rok_studiów    0.083    0.105  0.788 0.430 -0.123  0.288
+Group Var      0.188    0.205                           
+========================================================
+"
+
+Specjalność
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                MixedLM     Dependent Variable:     Avg_Diff
+No. Observations:     80          Method:                 REML    
+No. Groups:           40          Scale:                  0.2208  
+Min. group size:      2           Log-Likelihood:         -74.8609
+Max. group size:      2           Converged:              Yes     
+Mean group size:      2.0                                         
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.371    0.189 12.537 0.000  2.000  2.741
+Specjalność[T.GEOINF ]   0.065    0.222  0.291 0.771 -0.371  0.501
+Specjalność[T.NO_VAL]    0.033    0.304  0.110 0.913 -0.562  0.629
+Specjalność[T.SPOŁ-EKO]  0.396    0.265  1.495 0.135 -0.123  0.915
+C(Group)[T.B]           -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var                0.187    0.207                           
+==================================================================
+"
+
+Wady_wzroku
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -74.9984
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.381    0.146 16.334 0.000  2.096  2.667
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Wady_wzroku    0.170    0.176  0.969 0.332 -0.174  0.514
+Group Var      0.186    0.203                           
+========================================================
+"
+
+Ilość_snu
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM  Dependent Variable:  Avg_Diff
+No. Observations:   80       Method:              REML    
+No. Groups:         40       Scale:               0.2208  
+Min. group size:    2        Log-Likelihood:      -74.7720
+Max. group size:    2        Converged:           Yes     
+Mean group size:    2.0                                   
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.644    0.173 15.294 0.000  2.305  2.982
+Ilość_snu[T.7]  -0.069    0.245 -0.281 0.779 -0.550  0.412
+Ilość_snu[T.8]  -0.273    0.319 -0.855 0.392 -0.898  0.352
+Ilość_snu[T.8<] -0.495    0.277 -1.786 0.074 -1.038  0.048
+Ilość_snu[T.<6] -0.173    0.239 -0.724 0.469 -0.640  0.295
+C(Group)[T.B]   -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var        0.188    0.209                           
+==========================================================
+"
+
+Samopocz
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:               MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:    80        Method:               REML    
+No. Groups:          40        Scale:                0.2208  
+Min. group size:     2         Log-Likelihood:       -74.1565
+Max. group size:     2         Converged:            Yes     
+Mean group size:     2.0                                     
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.604    0.246 10.584 0.000  2.122  3.086
+Samopocz[T.wysoki] -0.205    0.260 -0.786 0.432 -0.715  0.306
+Samopocz[T.średni]  0.183    0.325  0.563 0.573 -0.455  0.821
+C(Group)[T.B]      -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var           0.179    0.200                           
+=============================================================
+"
+
+Stres
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM  Dependent Variable:  Avg_Diff
+No. Observations:   80       Method:              REML    
+No. Groups:         40       Scale:               0.2208  
+Min. group size:    2        Log-Likelihood:      -74.9317
+Max. group size:    2        Converged:           Yes     
+Mean group size:    2.0                                   
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.412    0.123 19.615 0.000  2.171  2.654
+Stres[T.wysoki]  0.315    0.234  1.348 0.178 -0.143  0.774
+Stres[T.średni]  0.069    0.213  0.326 0.744 -0.348  0.487
+C(Group)[T.B]   -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var        0.186    0.205                           
+==========================================================
+"
+
+Zmęcz
+"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM  Dependent Variable:  Avg_Diff
+No. Observations:   80       Method:              REML    
+No. Groups:         40       Scale:               0.2208  
+Min. group size:    2        Log-Likelihood:      -70.6413
+Max. group size:    2        Converged:           Yes     
+Mean group size:    2.0                                   
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.260    0.125 18.028 0.000  2.014  2.505
+Zmęcz[T.wysoki]  0.625    0.180  3.473 0.001  0.272  0.978
+Zmęcz[T.średni]  0.144    0.190  0.759 0.448 -0.229  0.518
+C(Group)[T.B]   -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var        0.123    0.161                           
+==========================================================
+"
+
+Czyt_map
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:               MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:    80        Method:               REML    
+No. Groups:          40        Scale:                0.2208  
+Min. group size:     2         Log-Likelihood:       -75.0103
+Max. group size:     2         Converged:            Yes     
+Mean group size:     2.0                                     
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.495    0.107 23.369 0.000  2.285  2.704
+Czyt_map[T.średni] -0.090    0.263 -0.344 0.731 -0.606  0.425
+C(Group)[T.B]      -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var           0.192    0.207                           
+=============================================================
+"
+
+Podziel_uwg
+"             Mixed Linear Model Regression Results
+================================================================
+Model:                MixedLM    Dependent Variable:    Avg_Diff
+No. Observations:     80         Method:                REML    
+No. Groups:           40         Scale:                 0.2208  
+Min. group size:      2          Log-Likelihood:        -74.4213
+Max. group size:      2          Converged:             Yes     
+Mean group size:      2.0                                       
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              2.463    0.186 13.255 0.000  2.099  2.828
+Podziel_uwg[T.wysoki] -0.132    0.220 -0.598 0.550 -0.564  0.300
+Podziel_uwg[T.średni]  0.217    0.229  0.949 0.342 -0.231  0.665
+C(Group)[T.B]         -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var              0.176    0.198                           
+================================================================
+"
+
+Analit_myśl
+"             Mixed Linear Model Regression Results
+================================================================
+Model:                MixedLM    Dependent Variable:    Avg_Diff
+No. Observations:     80         Method:                REML    
+No. Groups:           40         Scale:                 0.2208  
+Min. group size:      2          Log-Likelihood:        -74.3931
+Max. group size:      2          Converged:             Yes     
+Mean group size:      2.0                                       
+----------------------------------------------------------------
+                      Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept              1.871    0.551  3.395 0.001  0.791  2.951
+Analit_myśl[T.wysoki]  0.625    0.558  1.119 0.263 -0.469  1.719
+Analit_myśl[T.średni]  0.636    0.573  1.111 0.267 -0.487  1.759
+C(Group)[T.B]         -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var              0.191    0.208                           
+================================================================
+"
+
+Spostrzeg
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:                MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:     80        Method:               REML    
+No. Groups:           40        Scale:                0.2208  
+Min. group size:      2         Log-Likelihood:       -74.2988
+Max. group size:      2         Converged:            Yes     
+Mean group size:      2.0                                     
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.871    0.274 10.477 0.000  2.334  3.408
+Spostrzeg[T.wysoki] -0.473    0.290 -1.634 0.102 -1.041  0.094
+Spostrzeg[T.średni] -0.333    0.314 -1.061 0.289 -0.949  0.282
+C(Group)[T.B]       -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var            0.179    0.200                           
+==============================================================
+"
+
+Czyt_ze_zroz
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                 MixedLM    Dependent Variable:    Avg_Diff
+No. Observations:      80         Method:                REML    
+No. Groups:            40         Scale:                 0.2208  
+Min. group size:       2          Log-Likelihood:        -75.5184
+Max. group size:       2          Converged:             Yes     
+Mean group size:       2.0                                       
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.408    0.192 12.534 0.000  2.031  2.784
+Czyt_ze_zroz[T.wysoki]  0.123    0.215  0.571 0.568 -0.299  0.545
+Czyt_ze_zroz[T.średni] -0.009    0.292 -0.032 0.975 -0.582  0.563
+C(Group)[T.B]          -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var               0.197    0.212                           
+=================================================================
+"
+
+MAT
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -75.4401
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.510    0.140 17.940 0.000  2.236  2.784
+MAT[T.VAL]    -0.048    0.175 -0.274 0.784 -0.391  0.295
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var      0.192    0.208                           
+========================================================
+"
+
+POL
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -74.6444
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.430    0.110 21.994 0.000  2.213  2.647
+POL[T.VAL]     0.237    0.205  1.157 0.247 -0.164  0.639
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var      0.182    0.201                           
+========================================================
+"
+
+HIST
+"         Mixed Linear Model Regression Results
+========================================================
+Model:              MixedLM Dependent Variable: Avg_Diff
+No. Observations:   80      Method:             REML    
+No. Groups:         40      Scale:              0.2208  
+Min. group size:    2       Log-Likelihood:     -74.6111
+Max. group size:    2       Converged:          Yes     
+Mean group size:    2.0                                 
+--------------------------------------------------------
+              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------
+Intercept      2.459    0.105 23.419 0.000  2.253  2.665
+HIST[T.VAL]    0.245    0.287  0.854 0.393 -0.318  0.809
+C(Group)[T.B] -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var      0.187    0.204                           
+========================================================
+"
+
+Typ_uczenia
+"               Mixed Linear Model Regression Results
+====================================================================
+Model:                  MixedLM     Dependent Variable:     Avg_Diff
+No. Observations:       80          Method:                 REML    
+No. Groups:             40          Scale:                  0.2208  
+Min. group size:        2           Log-Likelihood:         -75.0315
+Max. group size:        2           Converged:              Yes     
+Mean group size:        2.0                                         
+--------------------------------------------------------------------
+                          Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------
+Intercept                  2.404    0.183 13.135 0.000  2.045  2.763
+Typ_uczenia[T.Kinestetyk]  0.050    0.429  0.116 0.907 -0.792  0.892
+Typ_uczenia[T.Słuchowiec]  0.328    0.286  1.145 0.252 -0.233  0.889
+Typ_uczenia[T.Wzrokowiec]  0.050    0.211  0.236 0.813 -0.364  0.464
+C(Group)[T.B]             -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var                  0.197    0.214                           
+====================================================================
+"
+
+Quest1_before
+"            Mixed Linear Model Regression Results
+=============================================================
+Model:               MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:    80        Method:               REML    
+No. Groups:          40        Scale:                0.2208  
+Min. group size:     2         Log-Likelihood:       -74.9708
+Max. group size:     2         Converged:            Yes     
+Mean group size:     2.0                                     
+-------------------------------------------------------------
+                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------
+Intercept           2.496    0.280  8.905 0.000  1.947  3.045
+Quest1_before[T.B] -0.014    0.290 -0.048 0.962 -0.583  0.555
+C(Group)[T.B]      -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var           0.193    0.208                           
+=============================================================
+"
+
+Quest2_before
+"              Mixed Linear Model Regression Results
+==================================================================
+Model:                MixedLM     Dependent Variable:     Avg_Diff
+No. Observations:     80          Method:                 REML    
+No. Groups:           40          Scale:                  0.2208  
+Min. group size:      2           Log-Likelihood:         -74.2377
+Max. group size:      2           Converged:              Yes     
+Mean group size:      2.0                                         
+------------------------------------------------------------------
+                        Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------
+Intercept                2.347    0.129 18.211 0.000  2.094  2.600
+Quest2_before[T.tabela]  0.429    0.235  1.821 0.069 -0.033  0.890
+Quest2_before[T.tekst]   0.246    0.333  0.739 0.460 -0.406  0.898
+Quest2_before[T.wykres]  0.190    0.215  0.886 0.375 -0.231  0.612
+C(Group)[T.B]           -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var                0.180    0.202                           
+==================================================================
+"
+
+Quest1_after
+"           Mixed Linear Model Regression Results
+============================================================
+Model:              MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:   80        Method:               REML    
+No. Groups:         40        Scale:                0.2208  
+Min. group size:    2         Log-Likelihood:       -75.3554
+Max. group size:    2         Converged:            Yes     
+Mean group size:    2.0                                     
+------------------------------------------------------------
+                  Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------
+Intercept          2.507    0.174 14.403 0.000  2.166  2.848
+Quest1_after[T.B] -0.033    0.195 -0.169 0.866 -0.415  0.349
+C(Group)[T.B]     -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var          0.193    0.208                           
+============================================================
+"
+
+Quest2_after
+"              Mixed Linear Model Regression Results
+=================================================================
+Model:                 MixedLM    Dependent Variable:    Avg_Diff
+No. Observations:      80         Method:                REML    
+No. Groups:            40         Scale:                 0.2208  
+Min. group size:       2          Log-Likelihood:        -73.7287
+Max. group size:       2          Converged:             Yes     
+Mean group size:       2.0                                       
+-----------------------------------------------------------------
+                       Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept               2.630    0.137 19.149 0.000  2.361  2.899
+Quest2_after[T.tabela] -0.120    0.254 -0.474 0.635 -0.618  0.377
+Quest2_after[T.tekst]  -0.759    0.553 -1.373 0.170 -1.843  0.325
+Quest2_after[T.wykres] -0.293    0.188 -1.554 0.120 -0.662  0.076
+C(Group)[T.B]          -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var               0.179    0.202                           
+=================================================================
+"
+
+is_change_1
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:                MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:     80        Method:               REML    
+No. Groups:           40        Scale:                0.2208  
+Min. group size:      2         Log-Likelihood:       -74.8856
+Max. group size:      2         Converged:            Yes     
+Mean group size:      2.0                                     
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.441    0.111 21.982 0.000  2.223  2.658
+is_change_1[T.True]  0.189    0.206  0.918 0.358 -0.215  0.594
+C(Group)[T.B]       -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var            0.186    0.204                           
+==============================================================
+"
+
+is_change_2
+"            Mixed Linear Model Regression Results
+==============================================================
+Model:                MixedLM   Dependent Variable:   Avg_Diff
+No. Observations:     80        Method:               REML    
+No. Groups:           40        Scale:                0.2208  
+Min. group size:      2         Log-Likelihood:       -75.3780
+Max. group size:      2         Converged:            Yes     
+Mean group size:      2.0                                     
+--------------------------------------------------------------
+                    Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------
+Intercept            2.527    0.147 17.184 0.000  2.239  2.815
+is_change_2[T.True] -0.073    0.177 -0.411 0.681 -0.420  0.275
+C(Group)[T.B]       -0.075    0.105 -0.714 0.475 -0.281  0.131
+Group Var            0.191    0.207                           
+==============================================================
+"
