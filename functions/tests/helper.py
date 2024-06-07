@@ -113,6 +113,6 @@ def make_decision(p_value: float, alpha=0.05):
     None
     """
     if p_value < alpha:
-        print(f"{Fore.RED}Istnieją podstawy do odrzucenia H0, przyjmujemy hipotezę H1.{Style.RESET_ALL}")
+        print(f"{Fore.RED}There are grounds to reject H0, accept H1.{Style.RESET_ALL}")
     else:
-        print('Brak podstaw do odrzucenia H0.')
+        print('No reason to reject H0, accept H0.')

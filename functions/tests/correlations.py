@@ -26,7 +26,7 @@ def correlation_dependent_groups_test(df: pd.DataFrame, first_var: str, second_v
     make_decision(p_val, alpha)
 
 
-def correlation_independent_groups_test(data1: pd.Series, data2: pd.Series, alpha=0.05, biserial=False) -> None:
+def correlation_independent_groups_test(data1: pd.Series, data2: pd.Series, alpha=0.05, biserial=False):
     """
     Function to conduct correlation test.
 
@@ -51,6 +51,7 @@ def correlation_independent_groups_test(data1: pd.Series, data2: pd.Series, alph
         p_val = spearman_corr(data1, data2)
 
     make_decision(p_val, alpha)
+    return f"P-value: {p_val:.2f}"
 
 
 def pearson_corr(data1: pd.Series, data2: pd.Series) -> float:
@@ -70,7 +71,7 @@ def pearson_corr(data1: pd.Series, data2: pd.Series) -> float:
     return p_value
 
 
-def spearman_corr(data1: pd.Series, data2: pd.Series, print_flag=False, alpha=0.05) -> float:
+def spearman_corr(data1: pd.Series, data2: pd.Series, print_flag=False, alpha=0.05):
     """
     Function to conduct Spearman correlation test.
 
@@ -88,7 +89,7 @@ def spearman_corr(data1: pd.Series, data2: pd.Series, print_flag=False, alpha=0.
     print('P-value:', p_value)
     if print_flag:
         make_decision(p_value, alpha)
-        return
+        return f"P-value: {p_value:.2f}"
     return p_value
 
 

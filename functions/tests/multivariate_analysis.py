@@ -4,7 +4,7 @@ from statsmodels.stats.anova import AnovaRM
 from functions.tests.helper import make_decision
 
 
-def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.05, statistically_significant=[], flagPrint=False, flagPrintAll=False) -> list:
+def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.05, statistically_significant=[], flagPrint=False, flagPrintAll=False) -> (list, list):
     """
     Performs linear mixed effects modeling on the provided data.
 
@@ -21,12 +21,25 @@ def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.0
     list[str].
 
     """
+    results = []
     lenStarted = len(statistically_significant)
     md = MixedLM.from_formula(formula, data=df, groups=df[subject])
     mdf = md.fit()
 
     p_values = mdf.pvalues[1:-1]
     names = mdf.model.exog_names[1:]
+
+    # for name in names:
+    #     results.append(name)
+    # results.append('\n')
+
+    # for p_val in p_values:
+    #     if alpha > p_val > 0.045:
+    #         results.append(f"{p_val:.3f}")
+    #     else:
+    #         results.append(f"{p_val:.2f}")
+    # results.append('\n')
+
     for i, p_val in enumerate(p_values):
         if p_val < alpha:
             if flagPrint:
@@ -39,10 +52,12 @@ def linear_mixed_effects(df: pd.DataFrame, formula: str, subject='ID', alpha=0.0
     if flagPrintAll and flagPrint:
         print(mdf.summary())
 
+    results.append(str(mdf.summary()))
+    results.append('\n')
     if lenStarted == len(statistically_significant):
         statistically_significant.append('')
 
-    return statistically_significant
+    return statistically_significant, results
 
 
 def anova(df: pd.DataFrame, depvar: str, groups: list, subject='ID', alpha=0.05):
@@ -64,10 +79,14 @@ def anova(df: pd.DataFrame, depvar: str, groups: list, subject='ID', alpha=0.05)
     model = aov.fit()
     result = model.anova_table
     print(result)
-    
+
+    result_p_val = []
     for i in range(len(result)):
         print('-------------------')
         p_val = result.iloc[i]['Pr > F']
+        result_p_val.append(f"{p_val:.2f}")
         name = result.index[i]
         print(f"Zmienna: {name}, P-value: {p_val:.10f}")
         make_decision(p_val, alpha)
+
+    return result_p_val

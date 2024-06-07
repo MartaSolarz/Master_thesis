@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 from functions.tests.helper import create_contingency_table
 
@@ -21,12 +22,50 @@ def plot_heatmap(df: pd.DataFrame, column1: str, column2: str, label1: str, labe
     Returns:
     None
     """
-    table = create_contingency_table(df, column1, column2)
-    sns.heatmap(table, annot=True, fmt="d", cmap=cmap)
-    plt.xlabel(label2)
-    plt.ylabel(label1)
-    plt.title(title)
+    table = pd.crosstab(df[column1], df[column2], normalize=True) * 100
+
+    sns.heatmap(table, annot=True, fmt=".1f", cmap=cmap)
+    plt.xlabel(label2 + " (%)")
+    plt.ylabel(label1 + " (%)")
     plt.show()
+
+
+def plot_multi_scatter(df: pd.DataFrame, category_param: str, continue_param: str, label_category: str,
+                       label_continue: str, title: str = ""):
+    """
+    Generates a scatter plot for multiple series of data based on a categorical parameter.
+
+    Args:
+    df (pd.DataFrame): The DataFrame containing the data.
+    category_param (str): The name of the column with categorical data.
+    continue_param (str): The name of the column with continuous data.
+    label_category (str): Label for categorical data.
+    label_continue (str): Label for continuous data.
+    title (str, optional): Title of the plot. Default is "Scatter Plot dla grup".
+
+    Returns:
+    None
+    """
+    sns.set(style="whitegrid")
+
+    ax = sns.stripplot(data=df, x=category_param, y=continue_param, jitter=True, alpha=0.7)
+    plt.title(title)
+    plt.grid(True, axis='y')
+    plt.xlabel(label_category)
+    plt.ylabel(label_continue)
+
+    df['category_code'] = df[category_param].astype('category').cat.codes
+
+    z = np.polyfit(df['category_code'], df[continue_param], 1)
+    p = np.poly1d(z)
+
+    plt.plot(np.unique(df['category_code']), p(np.unique(df['category_code'])), linestyle="--", color="red",
+             label="Linia trendu")
+
+    plt.legend()
+
+    plt.show()
+
 
 
 def plot_scatter_with_regression(df: pd.DataFrame, column_quantitative: str, column_category: str, label_quantitative: str, label_category: str, title="Scatter Plot with Regression"):
