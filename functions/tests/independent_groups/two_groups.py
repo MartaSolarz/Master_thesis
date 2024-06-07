@@ -27,6 +27,8 @@ def chi2_or_fisher_test(df: pd.DataFrame, variable1: str, variable2: str, alpha=
 
     make_decision(p_value, alpha)
 
+    return f"{p_value:.2f}"
+
 
 def chi2_test(data: pd.DataFrame, yate_corr=False) -> float:
     """
@@ -61,7 +63,7 @@ def fisher_test(data: pd.DataFrame) -> float:
     return result.pvalue
 
 
-def ttest_or_mannwhitney_test(df: pd.DataFrame, numerical_param: str, binary_param: str, alpha=0.05, var_1=0, var_2=1) -> None:
+def ttest_or_mannwhitney_test(df: pd.DataFrame, numerical_param: str, binary_param: str, alpha=0.05, var_1=0, var_2=1):
     """
     Conducts a test between a quantitative parameter and a binary parameter.
 
@@ -90,6 +92,7 @@ def ttest_or_mannwhitney_test(df: pd.DataFrame, numerical_param: str, binary_par
         p_value = mann_whitney_test(groups, print_flag=False)
 
     make_decision(p_value, alpha)
+    return f"{p_value:.2f}"
 
 def t_test(groups: list[pd.Series]) -> float:
     """
@@ -127,5 +130,5 @@ def mann_whitney_test(groups: list[pd.Series], print_flag=True, alpha=0.05):
     print('p-value:', p_value)
     if print_flag:
         make_decision(p_value, alpha)
-        return
+        return f"{p_value:.2f}"
     return p_value

@@ -5,7 +5,7 @@ from statsmodels.stats.contingency_tables import mcnemar
 from scipy.stats import ttest_rel, wilcoxon
 
 
-def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, yate_flag=False, alpha=0.05) -> None:
+def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, yate_flag=False, alpha=0.05):
     """
     Function to perform McNemar's test for a 2x2 contingency table.
 
@@ -28,9 +28,10 @@ def mcnemar_test(df: pd.DataFrame, column1: str, column2: str, yate_flag=False, 
     print('McNemar statistic:', result.statistic)
     print('p-value:', p_val)
     make_decision(p_val, alpha)
+    return f"{p_val:.2f}"
 
 
-def ttest_or_wilcoxon(groups: list[pd.Series], alpha=0.05) -> None:
+def ttest_or_wilcoxon(groups: list[pd.Series], alpha=0.05):
     """
     Function to perform either the t-test or the Wilcoxon test for dependent samples.
 
@@ -46,14 +47,15 @@ def ttest_or_wilcoxon(groups: list[pd.Series], alpha=0.05) -> None:
 
     if normality_test(groups, alpha) and homogeneity_var_test(groups, alpha):
         print('Conducting t-test...')
-        ttest_paired(groups, alpha)
-        return
+        p = ttest_paired(groups, alpha)
+        return p
 
     print('Conducting Wilcoxon test...')
-    wilcoxon_test(groups, alpha)
+    p = wilcoxon_test(groups, alpha)
+    return p
 
 
-def ttest_paired(groups: list[pd.Series], alpha=0.05) -> None:
+def ttest_paired(groups: list[pd.Series], alpha=0.05):
     """
     Function to perform the paired sample t-test.
 
@@ -72,9 +74,10 @@ def ttest_paired(groups: list[pd.Series], alpha=0.05) -> None:
     print(f"t-statistic: {t_statistic}")
     print(f"p-value: {p_value}")
     make_decision(p_value, alpha)
+    return f"{p_value:.2f}"
 
 
-def wilcoxon_test(groups: list[pd.Series], alpha=0.05, method='auto') -> None:
+def wilcoxon_test(groups: list[pd.Series], alpha=0.05, method='auto'):
     """
     Function to perform the Wilcoxon signed-rank test for paired samples.
 
@@ -97,3 +100,4 @@ def wilcoxon_test(groups: list[pd.Series], alpha=0.05, method='auto') -> None:
     print('Wilcoxon statistic:', result.statistic)
     print('p-value:', p_val)
     make_decision(p_val, alpha)
+    return f"{p_val:.2f}"

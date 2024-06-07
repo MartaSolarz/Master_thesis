@@ -57,7 +57,7 @@ def friedman_test(groups: list[pd.Series], print_flag=True, alpha=0.05):
     data = pd.DataFrame(groups).T.values
     statistic, p_value = friedmanchisquare(*data)
     print('Friedman statistic:', statistic)
-    print('p-value:', p_value)
+    print(f'p-value: {p_value:.5f}')
     if print_flag:
         make_decision(p_value, alpha)
         if p_value < alpha:

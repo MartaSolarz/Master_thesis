@@ -28,8 +28,10 @@ def chi2_or_chi2_yate_test(df: pd.DataFrame, variable1: str, variable2: str, alp
 
     make_decision(p_value, alpha)
 
+    return f"{p_value:.2f}"
 
-def anova_or_kruskalwallis_test(df: pd.DataFrame, continue_param: str, category_param: str, alpha=0.05) -> None:
+
+def anova_or_kruskalwallis_test(df: pd.DataFrame, continue_param: str, category_param: str, alpha=0.05):
     """
     Conducts a test between a categorical variable and a quantitative variable.
 
@@ -55,6 +57,7 @@ def anova_or_kruskalwallis_test(df: pd.DataFrame, continue_param: str, category_
         p_value = kruskal_wallis_test(groups, print_flag=False)
 
     make_decision(p_value, alpha)
+    return f"{p_value:.2f}"
 
 
 def anova_test(groups: list[pd.Series]) -> float:
@@ -90,5 +93,5 @@ def kruskal_wallis_test(groups: list[pd.Series], print_flag=True, alpha=0.05):
     print('p-value:', p_value)
     if print_flag:
         make_decision(p_value, alpha)
-        return
+        return f"{p_value:.2f}"
     return p_value
