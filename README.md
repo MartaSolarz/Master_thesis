@@ -90,4 +90,8 @@ Redundancy increase participants response time.
 
 In the multiple forms solution, the map served as an information source OR as a double-check, whereas when presented as a single form, the map served BOTH functions.
 
+### Publication
+
+The results of this work were presented during EuroCarto 2024 in Vienna on 9-11 September 2024. The abstract of the presentation was published at the following address: https://ica-abs.copernicus.org/articles/7/161/2024/.
+
 **Author**: Marta Solarz
