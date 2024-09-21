@@ -14,6 +14,42 @@ Within the framework of the present work, a study was carried out of the effect 
 - map
 - python
 
+### Stimuli
+
+The analyzed data in this repository was collected during the study using the following two types of materials prepared by me: 
+- single map (containing only a map) and
+- multiple forms (containing a map, table, chart, text presenting the same information).
+
+| Task  | Single map  | Multiple forms  |  
+|---|---|---|
+| Task 1 - Analysis of temporal changes | ![sm1](assets/sm1.png) | ![mf1](assets/mf1.png) | 
+| Task 2 - Finding extremes in the selected scope of data  | ![sm1](assets/sm2.png) | ![mf2](assets/mf2.png) | 
+| Task 3 - Recalculating values of quantitative data  | ![sm1](assets/sm3.png) | ![mf1](assets/mf3.png) | 
+
+### Methodology
+
+1. Independent variables: 
+- redundancy (main variable);
+- task difficulty (confounding variable): task 1: the easiest one, task 2: moderate difficulty; task 3: the most difficult;
+- personal features (confounding variables).
+
+2. Dependent variables: 
+- the usability performance metrics: correctness, response time, and task difficulty rating;
+- eye-tracking metrics: total and average fixation duration, number of fixations, average
+pupil size, total and average visit duration, and number of visits.
+
+3. Study design
+
+Within-subjects design.
+
+4. Participants
+
+The 41 undergraduate students of geography or spatial management, Faculty of Geography and Regional Studies, University of Warsaw. 
+
+5. Analysis tools
+
+Statistical tests performed using Python (e.g. statsmodels, scipy, scikit-posthocs, pingouin, numpy, pandas) - results are in this repository.
+
 ### Repository structure
 
 This repository contains Python scripts used to analyze the data collected during the study. 
@@ -24,5 +60,28 @@ In the `statistical_tests` folder, there are Python scripts with statistical tes
 Tests contain the following: 
 - `general` - some basic statistical tests, conducted on the whole dataset;
 - `redundancy` - statistical tests conducted on the dataset divided into groups based on the redundancy level.
+
+### Discussion
+
+Redundancy affects perception differently depending on task complexity (adding the
+importance of difficulty to previous results, e.g. Matsukawa, Miyata, and Ueda 2009).
+
+Participants fixated at various forms of presentation and found them helpful (supporting
+results of Edsall 2003). Map was viewed for a shorter time when displayed together with
+other visualization forms.
+
+Charts were one of the most frequently chosen forms, while text was chosen the least
+often (similar to results on preference toward charts by Koua, MacEachren, and Kraak,
+2007; Liu, Lai, and Chuang, 2011).
+
+### Conclusion
+
+Redundancy does not uniformly impact the analyzed performance metrics:
+
+Redundancy increase participants response time. 
+- For simple tasks, redundancy improves answer correctness and makes the task perceived as easier.
+- For difficult tasks, redundancy decreases correctness and makes the task perceived as more difficult.
+
+In the multiple forms solution, the map served as an information source OR as a double-check, whereas when presented as a single form, the map served BOTH functions.
 
 **Author**: Marta Solarz
