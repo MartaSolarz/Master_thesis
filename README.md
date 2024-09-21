@@ -7,12 +7,8 @@
 The master's thesis presents a study on the effect of information redundancy expressed using various forms of data presentation on the map user's perception, examined using usability indicators: correctness, response time, and task difficulty rating. Particular attention was paid to the map reading process, and the differences noticeable in this process when the map appeared alone or with a chart, table, and text. The relationships between the four mentioned forms of presentation occurring together were also analyzed separately. The study was conducted in the within-group scheme and used eye tracking to obtain data on when and where the subjects' gaze was focused. In addition, data on the personal characteristics and predispositions of the participants were obtained using a questionnaire. In the stage preceding the empirical study, the history of the development of the eye-tracking method was presented, the operation of modern eye trackers was described, and the applications of this technique in various fields of science and business were introduced, with particular emphasis on research in the field of mapping utility and redundancy. The processes of planning, preparing, and conducting the study in the work, as well as the tools, and software used (ArcMap, Corel Draw, Tobi Pro Lab, Python programming language) were characterized. The results obtained were presented descriptively and graphically, and the full results of each analysis were included as appendices. At the end of the thesis, the conclusions from the performed experiment were formulated, and a discussion of the obtained results was carried out in the context of previous research conducted in this area.
 
 ### Keywords
-- eye tracking
-- redundancy
-- map user perception
-- forms of presentation
-- map
-- python
+
+eye tracking, redundancy, visual perception, forms of presentation, maps, Python
 
 ### Stimuli
 
