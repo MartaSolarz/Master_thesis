@@ -26,6 +26,8 @@ The analyzed data in this repository was collected during the study using the fo
 | Task 2 - Finding extremes in the selected scope of data  | ![sm1](assets/sm2.png) | ![mf2](assets/mf2.png) | 
 | Task 3 - Recalculating values of quantitative data  | ![sm1](assets/sm3.png) | ![mf1](assets/mf3.png) | 
 
+Prepared usingL ArcMap, Python, Corel Draw.
+
 ### Methodology
 
 1. Independent variables: 
@@ -46,7 +48,11 @@ Within-subjects design.
 
 The 41 undergraduate students of geography or spatial management, Faculty of Geography and Regional Studies, University of Warsaw. 
 
-5. Analysis tools
+5. Eye tracking study
+
+The study was conducted using a 17-inch MSI GV72 7RD laptop with a resolution of 1920×1980. Eye tracking data was recorded using a Tobii X120 eye tracker with a sampling resolution of 120 Hz.
+
+6. Analysis tools
 
 Statistical tests performed using Python (e.g. statsmodels, scipy, scikit-posthocs, pingouin, numpy, pandas) - results are in this repository.
 
